@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'fontawesome';
+	src: url('../fonts/reservation_fontawesome-webfont.eot') format('embedded-opentype'), url('../fonts/reservation_fontawesome-webfont.woff') format('woff'), url('../fonts/reservation_fontawesome-webfont.ttf') format('truetype'), url('../fonts/reservation_fontawesome-webfont.svg') format('svg'), url('../fonts/reservation_fa-brands.eot') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto
+}
+
+@font-face {
+	font-family: 'fontawesome';
+	font-style: normal;
+	font-weight: 400;
+	font-display: block;
+	src: url("../fonts/reservation_fa-brands.eot");
+	src: url("../fonts/reservation_fa-brands.eot") format("embedded-opentype"), url("../fonts/reservation_fa-brands.woff") format("woff"), url("../fonts/reservation_fa-brands.ttf") format("truetype"), url("../fonts/reservation_fa-brands.svg") format("svg")
+}
+
+.fab {
+	font-family: 'fontawesome';
+	font-weight: 400
+}
+
+@font-face {
+	font-family: 'fontawesome';
+	font-style: normal;
+	font-weight: 400;
+	font-display: block;
+	src: url("../fonts/reservation_fa-regular.eot");
+	src: url("../fonts/reservation_fa-regular.eot") format("embedded-opentype"), url("../fonts/reservation_fa-regular.woff") format("woff"), url("../fonts/reservation_fa-regular.ttf") format("truetype"), url("../fonts/reservation_fa-regular.svg") format("svg")
+}
+
+.far {
+	font-family: 'fontawesome';
+	font-weight: 400
+}
+
+@font-face {
+	font-family: 'fontawesome';
+	font-style: normal;
+	font-weight: 900;
+	font-display: block;
+	src: url("../fonts/reservation_fa-solid.eot");
+	src: url("../fonts/reservation_fa-solid.eot") format("embedded-opentype"), url("../fonts/reservation_fa-solid.woff") format("woff"), url("../fonts/reservation_fa-solid.ttf") format("truetype"), url("../fonts/reservation_fa-solid.svg") format("svg")
+}
+
+.fa,
+.fas {
+	font-family: 'fontawesome';
+	font-weight: 900
+}
+
+@font-face {
+	font-family: 'IRANSansWeb';
+	src: url('../fonts/reservation_IRANSansWeb(FaNum).ttf') format('truetype'), url('../fonts/reservation_IRANSansWeb(FaNum).eot') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'IRANSansWebEnNum';
+	font-style: normal;
+	font-weight: lighter;
+	src: url('../fonts/reservation_IRANSansWeb_Medium.eot');
+	src: url('../fonts/reservation_IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/reservation_IRANSansWeb_Medium.woff') format('woff'), url('../fonts/reservation_IRANSansWeb_Medium.ttf') format('truetype')
+}
+
+@font-face {
+	font-family: 'flaticon';
+	src: url("../fonts/reservation_FG.eot?n1z373");
+	src: url("../fonts/reservation_FG.eot?#iefixn1z373") format("embedded-opentype"), url("../fonts/reservation_FG.woff?n1z373") format("woff"), url("../fonts/reservation_FG.ttf?n1z373") format("truetype"), url("../fonts/reservation_FG.svg?n1z373#lg") format("svg");
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: flaticon;
+	src: url('../fonts/fontFlaticon.ttf') format("truetype"), url('../fonts/fontFlaticon.woff') format("woff"), url("../fonts/fontFlaticon.eot#iefix") format("embedded-opentype"), url("../fonts/fontFlaticon.svg#flaticon") format("svg")
+}
+
+i[class*=" flaticon-"]:before,
+i[class^=flaticon-]:before {
+	font-family: flaticon !important;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+
+.font-color_1 {
+	color: #99175b
+}
+
+.color_font {
+	color: #5c5c5c
+}
+
+.background-color_1 {
+	background: #99175b !important
+}
+
+.font-color_2 {
+	color: #e14168
+}
+
+.background-color_2 {
+	background: #e14168 !important
+}
+
+.font-color_3 {
+	color: #30d5a0
+}
+
+.background-color_3 {
+	background: #30d5a0
+}
+
+.font-color_4 {
+	color: #fff
+}
+
+.item_hotel {
+	border-left: 2px solid #e14168
+}
+
+.active_tab_tour {
+	background: #e14168;
+	color: #fff
+}
+
+.controls:hover {
+	background: #e14168;
+	color: #fff
+}
+
+.brd-pdf {
+	border-color: #99175b !important
+}.fa,
+.fas, .fal {font-family:'fontawesome';font-weight:900;}
+.fa, .fas, .fal {
+	font-family: 'fontawesome';
+	font-weight: 900;
+}
+main {position: relative;}
+
+
+/*<!--------------------------------START CSS LIST TEMPLATE 3-------------------------------*/
+.btn_1{background-color:#e14168;color:#fff}.btn_1:hover{background-color:#000}.login_module_prev:hover{color:#000;border-color:#000}#Login_box .shine-hover{background-color:#465f88;border:1px solid #465f88;color:#fff}#Login_box .shine-hover:hover{background-color:#465f88}.login_info i{color:#465f88 !important}.radioButton:checked+label span::after{color:#465f88;border:2px solid #465f88}.airport_filter,.airport_filter_des{border-bottom:1px dashed #465f88}.details-btn:hover{background-color:#465f88;color:#fff}.btn-item button{background-color:#465f88;border:1px solid #465f88}.details-btn{border:1px solid #465f88}.flight-duration-stop:before{background-color:#465f88;border:1px solid #465f88}.details-row-middle_1{border-left:2px dashed #465f88}.details-circle::before,.details-circle::after{border:2px solid#465f88}.section-input_list input[type="checkbox"]:checked+label span.checkbox::after,.section-input_list input[type="radio"]:checked+label span.checkbox::after{color:#465f88}.section-input_list input[type="checkbox"]:checked+label span.checkbox::before,.section-input_list input[type="radio"]:checked+label span.checkbox::before{border-color:#465f88}fieldset hr{background-color:#e14168}.rangevalFirst,.rangevalSecond,.rangevalFirst_2,.rangevalSecond_2,.rangevalSecond_2 span,.rangevalFirst_2 span{color:#e14168}.filter-container:not(:last-child){border-bottom:1px dashed #465f88}.sort-items li.active,.sort-items li:hover{color:#465f88}.confirm{border:1px solid #465f88}.confirm:hover{background-color:#fff;color:#465f88}.minus-btn{background-color:#900;box-shadow:#d1bcdc 0 -3px 0 0 inset}.plus-btn{background-image:linear-gradient(#9aca0f,#73b828);box-shadow:rgba(0,0,0,0.15) 0 3px 3px 0,#0a9346 0 -3px 0 0 inset}.after-btn:hover,.before-btn:hover{background-color:#465f88;color:#fff;border:1px solid #465f88}.flight-summary-info .dash i{color:#465f88}.close-research{border:1px solid #465f88;color:#465f88}.flight_type .active,.flight_type li:hover{color:#465f88}.btn-item button:hover{background-color:#fff !important;color:#e14168 !important;box-shadow:0 10px 13px -10px #0c2d33}.searched-item button:hover{background-color:#e14168;box-shadow:0 10px 13px -10px #0c2d33}.exchange-icon:hover{background-color:#e14168;color:#fff}.exchange-icon{border:1px solid #e14168;color:#e14168}.searched-flight{border-bottom:1px dashed #465f88}.progress-bar{background-color:#465f88 !important}.angle-content .three{color:#e14168}.loading-container:hover .loading{border-color:transparent #e14168 transparent #e14168}.loading{border-color:transparent #465f88 transparent #465f88}.section-container .dash{color:#e14168}.close-content .fa-times::before{color:#e14168 !important}.Basis_Calendar .month_day_list table td:hover,.Basis_Calendar .selected_date{background-color:#e14168}.Basis_Calendar .month_change i:hover{color:#465f88}.Basis_Calendar .current_day{background-color:#e141685c !important}.Basis_Calendar .selected_day{background-color:#465f88}.ui-datepicker-today .ui-state-highlight,.ui-datepicker table thead th,.ui-datepicker .ui-datepicker-buttonpane button,.ui-datepicker-buttonpane .ui-datepicker-current:focus{background-color:#465f88}.ui-datepicker th,.ui-datepicker .ui-datepicker-prev span,.ui-datepicker .ui-datepicker-next span{color:#465f88}.ui-datepicker-buttonpane .ui-state-default:hover,.ui-datepicker-buttonpane .ui-state-default:focus,.ui-datepicker-buttonpane .ui-datepicker-current:hover,.ui-state-active,.ui-widget-content .ui-state-active,.ui-widget-header .ui-state-active{border:1px solid#e14168;background-color:#e14168 !important}.name-tour{color:#465f88}.item-tour:hover{background-color:#465f88;color:#fff}.tour-info-tlt{background-color:#e14168}.tour-completion-info i{color:#e14168}.side-tour i{color:#faa944}.row-other-inf{border-right:3px solid #e14168}.tlt-table{background-color:#e14168}.loading-img img{width:100px}
+/*<!--------------------------------END CSS LIST TEMPLATE 3-------------------------------*/
+/*<!--------------------------------START CSS VIEW TEMPLATE 3-------------------------------*/
+.flight-duration-stop::before{background-color:#465f88;border:1px solid #465f88}.next-btn{background-color:#465f88}.next-btn:hover{background-color:#e14168}.prev-passengers{border-bottom:2px solid #465f88;color:#465f88}.prev-passengers svg{fill:#465f88}.prev-passengers:hover{border-color:#e14168 !important;color:#e14168 !important}.prev-passengers:hover svg{fill:#e14168}.passengers-prev-title svg{fill:#465f88}.passenger-title{color:#465f88}.details-item-title{color:#465f88}.nav-details li:hover,.nav-details li.active{color:#465f88}.nav-details li::before{border-top:3px solid #465f88}.brief-container .head-items .title{background-color:#465f88;color:#fff}.buyer-type ul li.active,.buyer-type ul li:hover{background-color:#465f88;color:#fff}.buyer-type ul li{border:1px solid #465f88;color:#e14168}.login-btn{background-color:#465f88}.login-link{border:1px solid #465f88;color:#e14168}.login-link:hover{background-color:#e14168;color:#fff !important}.login-btn:hover{background-color:#465f88}.login-btn:hover{box-shadow:0 10px 13px -10px #0c2d33}.login-title i{color:#465f88}.bottom-content .action-loading{background-color:#465f88}.select-passnger{background-color:#465f88}.inside-title{border-right:3px solid #465f88}.duration-details{border-bottom:2px dashed #e14168}.duration-details::after,.duration-details::before{background-color:#e14168}
+/*<!--------------------------------END CSS VIEW-------------------------------*/
+/*<!--------------------------------START CSS LOGIN-------------------------------*/
+
+/* updated login  */
+.user-profile-btn{color: #fff;}.section-menu{display: inline-block;}.Login_Information {display: inline-block;font-size: 14px;border-radius: 3em;padding: 0.6em 1em;text-align: center;}
+/* updated login  */
+/*<!--------------------------------END CSS LOGIN-------------------------------*/
+
+
+
+
+/*--------------START CSS PDF-PACKAGE -------------*/
+#temp1-pdf-package .print1{border:1px solid #e14168;border:1px solid #e14168}#temp1-pdf-package .hotel-info tr:first-child td{border-left:1px dashed #e14168 !important}#temp1-pdf-package .name-table td table tr td{background-color:#e14168}#temp1-pdf-package .part31,#temp1-pdf-package .hotel-2,#temp1-pdf-package .hotel-3,#temp1-pdf-package .hotel-4,#temp1-pdf-package .hotel-5,#temp1-pdf-package .hotel-6,#temp1-pdf-package .hotel-7,#temp1-pdf-package .hotel-8,#temp1-pdf-package .hotel-9{background-color:#e14168}#temp1-pdf-package .hotel-info tr:nth-child(1) td{border-left:1px dashed #e14168 !important}#temp1-pdf-package .hotel-info tr:first-child tr:nth-child(1) td{border-left:1px dashed #e14168 !important}#temp1-pdf-package .info-title{background:#e14168}#temp1-pdf-package .hotel-tooltip:after{border-top:5px solid #e14168}#temp1-pdf-package .page-nights{color:#e14168}#temp1-pdf-package .circle-1{background:#8a1e5941}#temp1-pdf-package .circle-2{background:#8a1e5970}#temp1-pdf-package .circle-3{background:#8a1e5998}#temp1-pdf-package .circle-5{background:#e14168}#temp1-pdf-package .tour-if::before{color:#e14168}@media only screen and (max-width:621px){.news-form .captcha-content{width:100%}.news-form .field-captcha{float:left}.news-form .field-captcha img{width:60px}}
+/*--------------END CSS PDF-PACKAGE -------------*/

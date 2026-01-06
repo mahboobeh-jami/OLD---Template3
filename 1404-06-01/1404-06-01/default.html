@@ -1,0 +1,971 @@
+<basis core='dbsource' name='captcha' source='trust_login'>
+    <member name='code' type='scalar' request='captcha'></member>
+</basis>
+<meta charset="UTF-8">
+<meta name="author" content="BasisCore">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+<link rel="apple-touch-icon" href="[##cms.cms.cdn##]/images/custom_icon1.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="shortcut icon" sizes="196x196" href="[##cms.cms.cdn##]/images/custom_icon1.png">
+
+<!----CSS LIBRARY---->
+<link href="https://cdn.basiscore.net/basisfly.com/css/reservation_tem4_style.css" type="text/css" rel="stylesheet" />
+<link href="https://cdn.basiscore.net/basisfly.com/css/reservation_tem_datepicker.css" type="text/css"
+    rel="stylesheet" />
+<link href="https://cdn.basiscore.net/basisfly.com/css/reservation_tem4_font_awesome.css" type="text/css"
+    rel="stylesheet" />
+<link href="https://cdn.basiscore.net/basisfly.com/css/reservation_owl_carousel_tem4.css" type="text/css"
+    rel="stylesheet" />
+<!----CSS CUSTOMIZE---->
+<link href="[##cms.cms.cdn##]/css/style_tem.css" type="text/css" rel="stylesheet" />
+<link href="[##cms.cms.cdn##]/css/font_awesome.css" type="text/css" rel="stylesheet" />
+<!----JS LIBRARY---->
+<script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.7.1.min.js" type="text/javascript"></script>
+
+
+<!-- add for update -->
+     <link href="[##cms.cms.cdn##]/css/customized.ui.min-demo.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body class="overflow-x">
+    <main>
+        <a href="#" class="hvr-icon-wobble-vertical" style="display: none;">
+            Icon Wobble Vertical <i class="fa fa-arrow-up hvr-icon"></i>
+        </a>
+        <div class="loginRegister"></div>
+        <basis core="call" file="header.inc" />
+        <section class="content">
+
+
+
+
+
+
+
+
+            <div class="banner-searchBox cover-image search-box-container" id="search-box">
+                <div class="bc-main">
+                    <section id="search-box-container">
+                    </section>
+                    <div class="clr"></div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <section class="about-container item-container dir-rtl">
+                <div class="bc-main">
+                    <div class="width_50 float-right">
+                        <p><a href="تماس-با-ما"><span class="color_2  font_13 title-content font-weight">پشتیبانی 24
+                                    ساعته</span></a></p>
+                        <article class="section-article-text  p-relative">
+                            <basis core="print" datamembername="db.view">
+
+                                <face filter="TypeID=150">
+                                    <h1 class="subtitle-content p-relative" itemprop="@vocabulary">تجربه سفر با @answer
+                                    </h1>
+                                </face>
+                                <face filter="prpid=7244">
+                                    <div class="about-bold-txt">
+                                        <p class="text-justify text-limit font_15">
+                                            @Answer
+                                        </p>
+                                    </div>
+                                </face>
+                                <face filter="prpid=7246">
+                                    <div class="text-justify color_grey text-limit font_13">
+                                        <p>@largetext</p>
+                                    </div>
+                                </face>
+                            </basis>
+                            <basis core="print" datamembername="db.view">
+                                <layout>
+                                    <div class="about-box-altern">
+                                        <ul>@child</ul>
+                                        <div class="clr"></div>
+                                    </div>
+                                </layout>
+                                <face filter="prpid=7246">
+                                    <li class="hvr-icon-forward"><i
+                                            class="far fa-hand-point-left"></i><a><span>@text</span></a></li>
+                                </face>
+                            </basis>
+                            <div class="Content_Shadow unvisible"></div>
+                        </article>
+                        <div class="Show_More unvisible" onclick="Show_More(this)"><span
+                                class="Text_Show_More background-color_2 color_white btn_1 hvr-icon-wobble-vertical hvr-ripple-out transition font_13 cursor-pointer">نمایش
+                                بیشتر</span></div>
+                    </div>
+                    <div class="width_50 float-left">
+                        <figure class="about-default-img">
+                            <img src="[##cms.cms.cdn##]/images/about-box-img.jpg" width="400" height="" alt="" />
+                        </figure>
+                        <div class="bottom-about-img"></div>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </section>
+            <section class="tour-container">
+                <div class="bc-main">
+                    <div class="svg-container p-absolute right">
+                        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="80%" id="blobSvg">
+                            <path id="blob"
+                                d="M411,347.5Q362,445,265,418.5Q168,392,100.5,321Q33,250,79.5,142.5Q126,35,245.5,43.5Q365,52,412.5,151Q460,250,411,347.5Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p class="dir-rtl more-results"><a href="/tour-list.bc?catid=[##db.catIDSpecial.catid##]"
+                            class="color_2 font_13 title-content font-weight tour__link">مشاهده تورها</a></p>
+                    <div class="dir-rtl subtitle-content p-relative">تورهای ویژه</div>
+                    <basis core="list" datamembername="db.tour-list">
+                        <layout>
+                            <div id="owl-demo" class="owl-carousel">@child</div>
+                        </layout>
+
+
+                        <face filter="link is null and [00380X00400prp] is null">
+                            <article class="item-card figure p-relative effect-apollo 1">
+                                <a href="tour.bc?id=@id" class="color_grey">
+                                <figure class="item-card-img">
+                                    <img src="[##cms.cms.cdn##]/@type_159" class="cover-image object-cover" width="380" height="400" alt="@title"/>
+                                    <figcaption></figcaption>
+                                </figure>
+                                <div class="item-card-body">
+                                    <div class="inner-item-card-body p-relative width_80 border-radius">
+                                        <header class="text-center">
+                                            <h2 class="font_16">@title </h2>
+                                            <span class="font_11 ariline-name dir-rtl"><i class="fa fa-plane"></i>@prp_10000504</span>
+                                        </header>
+                                        <footer class="background-color_white font_12 dir-rtl">
+                                            <span class="width_50 float-right text-right">
+                                                <p class="time-tour"><i class="fa fa-clock"></i><span class="slice">@prp_8076</span> </p>
+                                                <p><i class="fa fa-calendar-alt"></i>@prp_8077</p>
+                                            </span>
+                                            <span class="width_50 float-left slice cost-tour font-weight color_2 text-center">@prp_8181</span>
+                                            <div class="clr"></div>
+                                        </footer>
+                                    </div>
+                                </div>
+                            </a>
+                            </article>
+                        </face>
+                        <face filter="[00380X00400prp] is null">
+                            <article class="item-card figure p-relative effect-apollo 2">
+                                <a href="@link" class="color_grey">
+                                <figure class="item-card-img">
+                                    <img src="[##cms.cms.cdn##]/@type_159" class="cover-image object-cover" width="380" height="400" alt="@title"/>
+                                    <figcaption></figcaption>
+                                </figure>
+                                <div class="item-card-body">
+                                    <div class="inner-item-card-body p-relative width_80 border-radius">
+                                        <header class="text-center">
+                                            <h2 class="font_16">@title </h2>
+                                            <span class="font_11 ariline-name dir-rtl"><i class="fa fa-plane"></i>@prp_10000504</span>
+                                        </header>
+                                        <footer class="background-color_white font_12 dir-rtl">
+                                            <span class="width_50 float-right text-right">
+                                                <p class="time-tour"><i class="fa fa-clock"></i><span class="slice">@prp_8076</span> </p>
+                                                <p><i class="fa fa-calendar-alt"></i>@prp_8077</p>
+                                            </span>
+                                            <span class="width_50 float-left slice cost-tour font-weight color_2 text-center">@prp_8181</span>
+                                            <div class="clr"></div>
+                                        </footer>
+                                    </div>
+                                </div>
+                            </a>
+                            </article>
+                        </face>
+                        <face filter="link is null">
+                            <article class="item-card figure p-relative effect-apollo 3">
+                                <a href="tour.bc?id=@id" class="color_grey">
+                                <figure class="item-card-img">
+                                    <img src="[##cms.cms.cdn##]/@00380X00400prp" class="cover-image object-cover" width="380" height="400" alt="@title"/>
+                                    <figcaption></figcaption>
+                                </figure>
+                                <div class="item-card-body">
+                                    <div class="inner-item-card-body p-relative width_80 border-radius">
+                                        <header class="text-center">
+                                            <h2 class="font_16">@title </h2>
+                                            <span class="font_11 ariline-name dir-rtl"><i class="fa fa-plane"></i>@prp_10000504</span>
+                                        </header>
+                                        <footer class="background-color_white font_12 dir-rtl">
+                                            <span class="width_50 float-right text-right">
+                                                <p class="time-tour"><i class="fa fa-clock"></i><span class="slice">@prp_8076</span> </p>
+                                                <p><i class="fa fa-calendar-alt"></i>@prp_8077</p>
+                                            </span>
+                                            <span class="width_50 float-left slice cost-tour font-weight color_2 text-center">@prp_8181</span>
+                                            <div class="clr"></div>
+                                        </footer>
+                                    </div>
+                                </div>
+                            </a>
+                            </article>
+                        </face>
+                        <face>
+                            <article class="item-card figure p-relative effect-apollo 4">
+                                <a href="@link" class="color_grey">
+                                <figure class="item-card-img">
+                                    <img src="[##cms.cms.cdn##]/@00380X00400prp" class="cover-image object-cover" width="380" height="400" alt="@title"/>
+                                    <figcaption></figcaption>
+                                </figure>
+                                <div class="item-card-body">
+                                    <div class="inner-item-card-body p-relative width_80 border-radius">
+                                        <header class="text-center">
+                                            <h2 class="font_16">@title </h2>
+                                            <span class="font_11 ariline-name dir-rtl"><i class="fa fa-plane"></i>@prp_10000504</span>
+                                        </header>
+                                        <footer class="background-color_white font_12 dir-rtl">
+                                            <span class="width_50 float-right text-right">
+                                                <p class="time-tour"><i class="fa fa-clock"></i><span class="slice">@prp_8076</span> </p>
+                                                <p><i class="fa fa-calendar-alt"></i>@prp_8077</p>
+                                            </span>
+                                            <span class="width_50 float-left slice cost-tour font-weight color_2 text-center">@prp_8181</span>
+                                            <div class="clr"></div>
+                                        </footer>
+                                    </div>
+                                </div>
+                            </a>
+                            </article>
+                        </face>
+                    </basis>
+                </div>
+            </section>
+            <section class="information-container  item-container">
+                <div class="bc-main">
+                    <div class="width_50 float-right">
+                        <figure>
+                            <img src="[##cms.cms.cdn##]/images/supporting-bg-tem4.jpg" width="100%" height="" alt="" />
+                        </figure>
+                    </div>
+                    <div class="width_50 float-left dir-rtl">
+                        <p><a href="#search-box"><span class="color_2  font_13 title-content font-weight">رزرو آنلاین
+                                    ؟</span></a></p>
+                        <basis core="print" datamembername="db.info">
+                            <face filter="TypeID=150">
+                                <div class="subtitle-content p-relative" itemprop="@vocabulary">چرا @answer ؟</div>
+                            </face>
+                        </basis>
+                        <article>
+                            <ol>
+                                <li class="first-row">
+                                    <div class="width_30 float-left text-center">
+                                        <span class="border-radius">
+                                            <svg id="Capa_1" enable-background="new 0 0 512 512" height="40pt"
+                                                viewBox="0 0 512 512" width="40pt" xmlns="http://www.w3.org/2000/svg">
+                                                <g>
+                                                    <path
+                                                        d="m485.206 257.944-11.973-5.87c.087-8.458-.044-16.141 0-23.374 0-37.214-9.547-73.769-27.645-106.094 4.23-6.1 4.44-14.239.149-20.659-15.905-23.802-35.861-44.205-59.313-60.643-15.36-10.766-31.994-19.61-49.439-26.288-3.869-1.481-8.205.455-9.686 4.323-1.481 3.869.455 8.205 4.323 9.686 16.297 6.238 31.839 14.502 46.192 24.563 21.925 15.368 40.582 34.443 55.451 56.694.938 1.403.718 3.251-.521 4.394-1.137.9-26.184 24.463-27.699 25.38-.762.381-1.497.372-1.93.314-.611-.083-1.752-.408-2.527-1.654-9.847-15.827-22.141-29.879-36.541-41.768-30.504-25.184-69.07-39.054-108.594-39.054-41.561 0-81.641 15.162-112.859 42.694-12.288 10.836-22.944 23.342-31.674 37.168-.721 1.141-1.813 1.422-2.401 1.487-.615.07-1.797.033-2.813-.984l-26.041-26.042c-1.16-1.161-1.323-2.99-.387-4.351 11.041-16.045 24.22-30.529 39.171-43.05 38.364-32.124 87.02-49.816 137.005-49.816 13.748 0 27.505 1.32 40.89 3.924 4.065.791 8.003-1.864 8.794-5.93s-1.864-8.003-5.93-8.794c-14.326-2.787-29.047-4.2-43.754-4.2-53.5 0-105.576 18.936-146.635 53.318-15.991 13.392-30.088 28.885-41.898 46.047-4.523 6.574-4.243 15.195.404 21.43-7.448 12.776-13.6 26.242-18.306 40.113-1.331 3.922.771 8.181 4.693 9.512.799.271 1.611.399 2.41.399 3.125 0 6.042-1.969 7.102-5.092 3.94-11.613 8.982-22.919 15-33.737l16.016 16.017c-12.72 25.455-19.425 53.795-19.425 82.379v156.144l-41.417-20.306c-4.879-2.392-8.032-7.448-8.032-12.882v-69.048c0-5.434 3.153-10.49 8.032-12.882 2.532-1.354 7.641-3.582 11.869-5.822 4.57-2.451 7.409-7.197 7.409-12.386v-22.728c-.054-9.651.612-19.392 1.979-28.951.587-4.101-2.262-7.9-6.362-8.486-4.095-.588-7.899 2.262-8.486 6.362-1.472 10.288-2.188 20.771-2.131 31.117v22.119c-1.876 1.036-8.108 3.852-11.154 5.442-9.824 4.947-16.155 15.202-16.155 26.215v69.048c0 11.114 6.449 21.458 16.428 26.351l50.028 24.527c5.258 15.956 20.296 27.51 37.991 27.51 22.055 0 39.998-17.942 39.998-39.997v-134.905c0-22.055-17.943-39.998-39.998-39.998-9.418 0-18.08 3.28-24.922 8.747.708-24.792 6.874-49.248 17.985-71.317.765.009 1.534-.023 2.307-.11 5.555-.62 10.447-3.676 13.421-8.387 7.967-12.619 17.695-24.034 28.912-33.926 28.476-25.113 65.033-38.944 102.937-38.944 36.047 0 71.221 12.65 99.044 35.621 13.145 10.853 24.367 23.679 33.354 38.124 2.937 4.72 7.767 7.853 13.252 8.595.828.112 1.655.167 2.478.167.362 0 .721-.029 1.08-.05 10.767 21.777 16.751 45.85 17.448 70.227-6.842-5.468-15.504-8.748-24.923-8.748-22.055 0-39.998 17.943-39.998 39.998v22.493c0 4.142 3.358 7.5 7.5 7.5s7.5-3.358 7.5-7.5v-22.493c0-13.784 11.214-24.998 24.998-24.998s24.998 11.214 24.998 24.998v134.905c0 13.783-11.214 24.997-24.998 24.997s-24.998-11.214-24.998-24.997v-74.596c0-4.142-3.358-7.5-7.5-7.5s-7.5 3.358-7.5 7.5v74.596c0 22.055 17.943 39.997 39.998 39.997 9.453 0 18.144-3.303 24.998-8.807v17.866c0 5.396-4.391 9.787-9.787 9.787h-89.861c-2.337-6.919-8.875-11.92-16.572-11.92h-56.711c-9.649 0-17.5 7.851-17.5 17.5v38.345c0 9.649 7.851 17.5 17.5 17.5h56.711c7.67 0 14.189-4.968 16.546-11.85h48.693c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-47.739v-19.574h88.933c13.667 0 24.787-11.12 24.787-24.787v-37.554l19.574-9.596v66.598c0 13.737-11.176 24.913-24.913 24.913h-23.228c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h23.228c22.008 0 39.913-17.905 39.913-39.913v-73.952l13.447-6.592c9.979-4.893 16.428-15.236 16.428-26.351v-69.048c0-11.114-6.449-21.457-16.428-26.35zm-370.393-26.113c13.784 0 24.998 11.214 24.998 24.998v134.905c0 13.783-11.214 24.997-24.998 24.997s-24.998-11.214-24.998-24.997v-134.906c0-13.784 11.214-24.997 24.998-24.997zm131.94 262.669v-38.343c0-1.378 1.122-2.5 2.5-2.5h20.855v43.343h-20.855c-1.378 0-2.5-1.122-2.5-2.5zm61.711 0c0 1.378-1.122 2.5-2.5 2.5h-20.855v-43.343h20.855c1.378 0 2.5 1.122 2.5 2.5zm178.17-141.157c0 5.434-3.153 10.49-8.032 12.882l-41.417 20.306c0-19.128 0-140.567 0-156.144 0-28.341-6.597-56.471-19.114-81.76l16.385-15.12c15.556 29.156 23.753 61.819 23.777 95.053-.054 6.228.096 14.581-.01 24.648-.047 4.965 2.8 9.585 7.255 11.77l13.125 6.435c4.879 2.392 8.032 7.448 8.032 12.882v69.048z">
+                                                    </path>
+                                                    <path
+                                                        d="m323.451 231.566c-.541-6.491-4.325-11.749-9.641-13.396-2.505-.776-8.993-1.767-15.141 5.778-5.717 7.015-34.445 58.917-40.146 69.25-1.282 2.323-1.241 5.151.108 7.436s3.805 3.687 6.458 3.687h43.307c-.056 7.958-.117 15.636-.175 22.45-.036 4.142 3.293 7.528 7.435 7.564h.066c4.111 0 7.463-3.315 7.498-7.436.023-2.663.097-11.396.177-22.579h5.554c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-5.454c.156-25.174.259-54.085-.046-57.754zm-14.954 57.755h-30.672c11.262-20.225 25.356-45.074 30.768-53.441.118 8.231.042 30.502-.096 53.441z">
+                                                    </path>
+                                                    <path
+                                                        d="m246.413 327.502c-.052-4.142-3.412-7.43-7.594-7.405-13.662.172-28.304.267-38.328.224 5.63-7.404 14.839-19.691 28.941-39.841 6.807-10.104 11.995-19.654 12.67-30.313 0-18.484-15.038-33.522-33.522-33.522-15.983 0-29.816 11.369-32.893 27.033-.798 4.064 1.85 8.006 5.914 8.805 4.065.796 8.007-1.85 8.805-5.914 1.698-8.647 9.342-14.924 18.174-14.924 10.066 0 18.283 8.073 18.517 18.084-.572 6.759-4.274 13.648-9.955 22.149-16.155 23.082-25.8 35.712-30.982 42.497-6.162 8.068-8.021 10.503-6.665 14.913.767 2.495 2.671 4.414 5.223 5.264 5.218 1.4 37.391.62 54.288.543 4.143-.052 7.459-3.451 7.407-7.593z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div class="width_70 float-right">
+                                        <h3 class="font_16">پشتیبانی 24 ساعته</h3>
+                                        <p class="font_13 color_grey text-justify">24 ساعت شبانـه روز تیم پشتیبـانی
+                                            آماده پاسخگویی به سوالات و مشکلات مسافران گرامی می باشد.</p>
+                                    </div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li class="second-row">
+                                    <div class="width_30 float-left text-center">
+                                        <span class="border-radius background-color_2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 512 512"
+                                                width="40pt" height="40pt">
+                                                <path
+                                                    d="M488,64H24a8,8,0,0,0-8,8V408a8,8,0,0,0,8,8H164.9l-12.49,37.47A8,8,0,0,0,160,464H352a8,8,0,0,0,7.59-10.53L347.1,416H488a8,8,0,0,0,8-8V72A8,8,0,0,0,488,64ZM171.1,448l10.666-32H330.233L340.9,448ZM480,400H32V352H480Zm0-64H32V80H480Z">
+                                                </path>
+                                                <path
+                                                    d="M56,304H264a8,8,0,0,0,8-8V248a40.051,40.051,0,0,0-24-36.65V152a24.028,24.028,0,0,0-24-24H96a24.028,24.028,0,0,0-24,24v59.35A40.051,40.051,0,0,0,48,248v48A8,8,0,0,0,56,304ZM88,152a8.009,8.009,0,0,1,8-8H224a8.009,8.009,0,0,1,8,8v56H208v-8a24.027,24.027,0,0,0-24-24H136a24.027,24.027,0,0,0-24,24v8H88Zm104,48v8H128v-8a8.009,8.009,0,0,1,8-8h48A8.009,8.009,0,0,1,192,200ZM64,248a24.028,24.028,0,0,1,24-24H232a24.028,24.028,0,0,1,24,24v8H64Zm0,24H256v16H64Z">
+                                                </path>
+                                                <path
+                                                    d="M296,240h64a8,8,0,0,0,8-8V200a8,8,0,0,0-8-8H296a8,8,0,0,0-8,8v32A8,8,0,0,0,296,240Zm8-32h48v16H304Z">
+                                                </path>
+                                                <path
+                                                    d="M296,176h64a8,8,0,0,0,8-8V136a8,8,0,0,0-8-8H296a8,8,0,0,0-8,8v32A8,8,0,0,0,296,176Zm8-32h48v16H304Z">
+                                                </path>
+                                                <path d="M392,144h64a8,8,0,0,0,0-16H392a8,8,0,0,0,0,16Z"></path>
+                                                <path d="M392,176h64a8,8,0,0,0,0-16H392a8,8,0,0,0,0,16Z"></path>
+                                                <path d="M392,208h64a8,8,0,0,0,0-16H392a8,8,0,0,0,0,16Z"></path>
+                                                <path d="M392,240h64a8,8,0,0,0,0-16H392a8,8,0,0,0,0,16Z"></path>
+                                                <path
+                                                    d="M392,304a8,8,0,0,0,8-8V283.315l18.343,18.342a8,8,0,0,0,11.314-11.314L411.314,272H424a8,8,0,0,0,0-16H392a8,8,0,0,0-8,8v32A8,8,0,0,0,392,304Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div class="width_70 float-right">
+                                        <h3 class="font_16">خدمات برتر</h3>
+                                        <p class="font_13 color_grey text-justify">بهترین و ارزانترین هتل ها و بلیط
+                                            هواپیما را به صورت همزمان رزرو کنید و نگران هماهنگ کردن هتل و پرواز برای سفر
+                                            خود نباشید</p>
+                                    </div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li class="third-row">
+                                    <div class="width_30 float-left text-center">
+                                        <span class="border-radius">
+                                            <svg id="Capa_1" enable-background="new 0 0 512 512" height="40pt"
+                                                viewBox="0 0 512 512" width="40pt" xmlns="http://www.w3.org/2000/svg">
+                                                <g>
+                                                    <path
+                                                        d="m510.301 241.625-12.226-42.477c-.976-3.179-5.144-6.855-10.252-4.938-15.727 4.528-32.2-4.584-36.726-20.309-4.526-15.724 4.585-32.199 20.314-36.726 3.35-.74 7.361-4.22 6.054-9.632l-10.604-36.84c-3.178-11.043-10.465-20.187-20.52-25.747-10.055-5.561-21.673-6.871-32.716-3.694l-382.486 110.091c-11.043 3.179-20.187 10.466-25.747 20.521-5.56 10.055-6.872 21.674-3.693 32.716 5.967 16.432 13.702 48.757 10.978 66.114 0 4.131 3.298 7.506 7.427 7.602 12.563.292 23.522 8.585 27.43 20.242-2.783 2.239-6.004 4.008-9.587 5.13-3.942 1.234-6.177 5.39-5.034 9.359l5.169 17.958c-5.078 4.139-11.327 6.466-17.978 6.621-4.13.096-7.427 3.471-7.427 7.602v44.202c0 23.72 19.298 43.018 43.018 43.018h96.277c4.2 0 7.604-3.404 7.604-7.604 0-4.199-3.404-7.604-7.604-7.604h-96.277c-15.335 0-27.811-12.476-27.811-27.81v-37.384c5.2-.988 10.143-2.882 14.642-5.599l2.614 9.078c3.178 11.043 10.465 20.187 20.52 25.747 9.087 4.741 20.224 7.371 32.716 3.693l352.192-101.371c-4.561 7.023-7.213 15.397-7.213 24.377 0 22.464 16.59 41.126 38.162 44.38v37.079c0 15.335-12.476 27.81-27.81 27.81h-265.287c-4.2 0-7.604 3.404-7.604 7.604 0 4.199 3.404 7.604 7.604 7.604h265.288c23.72 0 43.017-19.298 43.017-43.018v-44.202c-.063-3.324-3.041-8.013-8.487-7.582-16.363 0-29.675-13.312-29.675-29.674s13.312-29.674 29.675-29.674c3.425.221 8.243-2.02 8.487-7.582v-4.305c3.95-3.338 7.306-7.395 9.884-12.056 5.56-10.058 6.871-21.676 3.692-32.72zm-482.417 42.277v-18.153c20.086-.754 35.478 19.138 29.485 38.335-6.56-10.362-17.227-17.802-29.485-20.182zm245.12 8.386 27.298-7.857 12.38 43.015-27.297 7.857zm220.296-25.305c-3.737 6.76-9.569 10.816-16.645 13.266l-113.734 32.736-.841-2.923c-1.162-4.036-5.382-6.364-9.409-5.204-4.035 1.162-6.366 5.375-5.204 9.41l.841 2.922-21.012 6.048-14.483-50.321c-.557-1.938-1.862-3.575-3.627-4.551-1.766-.976-3.845-1.211-5.783-.653l-41.912 12.063c-1.939.558-3.575 1.863-4.551 3.628s-1.211 3.845-.652 5.783l14.484 50.321-176.602 50.832c-7.141 2.056-14.652 1.207-21.152-2.387s-11.21-9.506-13.266-16.646l-10.341-35.928c18.258-9.242 28.14-30.644 23.24-50.568-5.394-21.93-25.583-35.369-47.621-34.136l-8.718-30.291c-2.054-7.139-1.207-14.651 2.388-21.151 3.594-6.5 9.506-11.211 16.645-13.266l254.138-73.149.842 2.923c.959 3.333 4 5.502 7.303 5.502.697 0 1.405-.097 2.108-.299 4.035-1.162 6.365-5.375 5.203-9.41l-.841-2.922 113.732-32.736c7.14-2.055 14.651-1.207 21.152 2.388 6.5 3.594 11.21 9.506 13.266 16.645l8.633 29.995c-19.83 9.093-30.611 31.616-24.397 53.204 6.214 21.586 27.304 34.936 48.948 32.092l10.256 35.632c2.054 7.14 1.207 14.651-2.388 21.151z">
+                                                    </path>
+                                                    <path
+                                                        d="m320.618 166.015-5.581-19.391c-1.162-4.036-5.383-6.365-9.41-5.204-4.035 1.162-6.366 5.375-5.204 9.41l5.581 19.391c1.115 2.919 4.599 6.584 9.409 5.204 4.037-1.162 6.367-5.375 5.205-9.41z">
+                                                    </path>
+                                                    <path
+                                                        d="m336.3 220.494-5.582-19.391c-1.162-4.036-5.38-6.363-9.411-5.204-4.035 1.162-6.365 5.375-5.203 9.411l5.582 19.391c1.116 2.919 4.599 6.583 9.41 5.204 4.036-1.162 6.366-5.375 5.204-9.411z">
+                                                    </path>
+                                                    <path
+                                                        d="m346.399 255.583c-1.162-4.037-5.383-6.365-9.41-5.204-4.035 1.161-6.366 5.375-5.204 9.41l5.581 19.391c1.115 2.919 4.599 6.584 9.41 5.204 4.035-1.161 6.366-5.375 5.204-9.41z">
+                                                    </path>
+                                                    <path
+                                                        d="m427.501 135.447c.976-1.765 1.211-3.845.652-5.783l-8.509-29.56c-1.161-4.035-5.379-6.365-9.41-5.204l-76.488 22.015c-4.035 1.162-6.366 5.375-5.204 9.41l8.508 29.56c1.548 2.91 3.168 6.389 9.41 5.204l76.489-22.016c1.939-.557 3.576-1.861 4.552-3.626zm-77.94 8.926-4.302-14.946 61.875-17.809 4.302 14.946z">
+                                                    </path>
+                                                    <path
+                                                        d="m415.531 251.265 40.864-11.762c4.035-1.162 6.366-5.375 5.204-9.411-1.162-4.037-5.382-6.365-9.409-5.204l-40.864 11.762c-4.035 1.162-6.366 5.375-5.204 9.41.959 3.333 4 5.502 7.303 5.502.696.002 1.404-.095 2.106-.297z">
+                                                    </path>
+                                                    <path
+                                                        d="m459.728 251.084-40.864 11.761c-4.035 1.162-6.366 5.375-5.204 9.41.959 3.334 4 5.503 7.303 5.503.696 0 1.405-.097 2.107-.298l40.864-11.761c4.035-1.162 6.366-5.375 5.204-9.41-1.163-4.038-5.382-6.366-9.41-5.205z">
+                                                    </path>
+                                                    <path
+                                                        d="m145.519 330.177-57.628 16.587c-4.035 1.162-6.366 5.375-5.204 9.41.959 3.333 4 5.502 7.303 5.502.697 0 1.405-.097 2.107-.298l57.628-16.587c4.035-1.162 6.366-5.375 5.204-9.41-1.162-4.037-5.382-6.365-9.41-5.204z">
+                                                    </path>
+                                                    <path
+                                                        d="m438.966 420.816c4.2 0 7.604-3.404 7.604-7.604v-29.439c0-4.199-3.404-7.604-7.604-7.604h-83.955c-4.2 0-7.604 3.404-7.604 7.604v29.439c0 4.199 3.404 7.604 7.604 7.604zm-76.352-29.438h68.748v14.232h-68.748z">
+                                                    </path>
+                                                    <path
+                                                        d="m317.781 404.573c4.2 0 7.604-3.404 7.604-7.604s-3.404-7.604-7.604-7.604h-80.834c-4.2 0-7.604 3.404-7.604 7.604s3.404 7.604 7.604 7.604z">
+                                                    </path>
+                                                    <path
+                                                        d="m237.094 210.782c-3.005.865-10.681 3.391-20.875 6.822l-43.455-41.14c-1.955-1.85-4.741-2.531-7.33-1.786l-23.051 6.635c-3.649 1.131-7.413 6.092-4.096 11.711l29.262 41.188c-25.284 8.696-49.367 17.047-56.787 19.622l-25.147-6.529c-5.205-1.449-11.909 4.398-8.476 11.197l19.243 32.923c2.348 2.369 3.674 4.64 9.032 3.355l13.79-4.731c4.163-.959 31.539-7.266 60.388-13.998l-2.888 50.442c.607 3.666 1.639 8.871 9.694 7.742l23.051-6.635c2.588-.745 4.588-2.802 5.26-5.409l14.935-57.947c10.454-2.512 18.301-4.454 21.305-5.319 17.176-4.944 23.785-26.48 24.482-28.919.799-2.795-.066-5.802-2.229-7.745-1.887-1.696-18.945-16.42-36.108-11.479zm-80.198-17.822 8.568-2.466 34.464 32.629c-5.553 1.891-11.414 3.894-17.383 5.94zm44.172 121.228-8.568 2.466 2.53-44.214c6.143-1.441 12.173-2.86 17.882-4.21zm45.676-69.876c-27.328 7.244-126.823 29.811-132.099 31.224l-8.275 2.839-6.87-11.753 9.67 2.511c7.192.265 9.395-2.477 23.287-6.719 23.813-8.251 64.468-22.249 84.306-28.945 12.082-4.085 21.297-7.139 24.537-8.072 5.651-1.628 12.966 1.991 17.729 5.155-2.334 5.203-6.583 12.118-12.285 13.76z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div class="width_70 float-right">
+                                        <h3 class="font_16">سفری ایمن</h3>
+                                        <p class="font_13 color_grey text-justify">گاهی اوقات هیجان سفر باعث می شود
+                                            مسافرین ایمنی های لازم را در نظر نگیرند. لذا راهنمایی ها و ترفندهای ما به
+                                            شما کمک می کنند تا یک سفر امن و بدون دردسر داشته باشید.</p>
+                                    </div>
+                                    <div class="clr"></div>
+                                </li>
+                            </ol>
+                        </article>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </section>
+            <section class="article-container">
+                <div class="bc-main">
+                    <div class="svg-container p-absolute left">
+                        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="90%" id="blobSvg">
+                            <path id="blob"
+                                d="M411,347.5Q362,445,265,418.5Q168,392,100.5,321Q33,250,79.5,142.5Q126,35,245.5,43.5Q365,52,412.5,151Q460,250,411,347.5Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p class="dir-rtl more-results"><a href="article-list.bc?catid=[##db.ArcatID.catID##]"
+                            class="color_2  font_13 title-content font-weight">مشاهده مقاله ها</a></p>
+                    <div class="dir-rtl subtitle-content p-relative">مجله گردشگری</div>
+                    <basis core="list" datamembername="db.blogcat">
+                        <layout>@child</layout>
+                        <face filter="RowNumber=1 and link is null">
+                            <div class="width_30 float-right right-img">
+                                <a href="article-list.bc?catid=@catID">
+                                    <article class="p-relative">
+                                        <figure>
+                                            <img src="[##cms.cms.cdn##]/@image" width="368" height="490" alt="@title"
+                                                class="cover-image border-radius" />
+                                        </figure>
+                                        <div class="p-absolute title-card width_100">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
+                                                viewBox="0 0 512 512" width="50" height="50">
+                                                <path
+                                                    d="M473.185,201.955a6.869,6.869,0,0,0-9.884,7.959,215.578,215.578,0,0,1,6.52,30.115,6.9,6.9,0,0,0,6.791,5.9,7.192,7.192,0,0,0,.976-.069,6.876,6.876,0,0,0,5.83-7.768,229.26,229.26,0,0,0-6.937-32.043A6.823,6.823,0,0,0,473.185,201.955Z" />
+                                                <path
+                                                    d="M433.873,136.335a6.366,6.366,0,0,0-1.487,8.88,217.164,217.164,0,0,1,16.092,26.355,6.367,6.367,0,0,0,11.315-5.843,229.725,229.725,0,0,0-17.039-27.9A6.362,6.362,0,0,0,433.873,136.335Z" />
+                                                <path
+                                                    d="M354.4,203.744a18.4,18.4,0,0,0-7.146,10.417l-3.24,12.657a18.386,18.386,0,0,0,6.491,19.044,30.522,30.522,0,0,1,10.939,30.588l-6.547,29.2a30.331,30.331,0,0,1-8.267,14.941l-5.708,5.653a18.292,18.292,0,0,0-5.339,15.056l3.483,31.915a131.743,131.743,0,0,0,25.8-176.929Z" />
+                                                <path
+                                                    d="M338.19,312.068a18.352,18.352,0,0,0,5-9.04l6.547-29.2a18.469,18.469,0,0,0-6.619-18.508,30.385,30.385,0,0,1-10.727-31.474l3.24-12.657a30.423,30.423,0,0,1,11.81-17.217l10.2-7.264A131.793,131.793,0,0,0,263.1,139l5.807,35.309a20.848,20.848,0,0,1-9.143,20.808l-23.172,15.174a8.8,8.8,0,0,0-3.836,9.044l3.115,16.313a8.867,8.867,0,0,0,4.843,6.3l16.281,7.839a20.891,20.891,0,0,1,11.464,22.46l-5.932,32.945a20.929,20.929,0,0,1-3.82,8.786,20.641,20.641,0,0,1-16.622,8.357,21.45,21.45,0,0,1-2.214-.115,20.661,20.661,0,0,1-16.737-11.941l-5.967-12.843a8.86,8.86,0,0,0-8.009-5.11H185.028a8.787,8.787,0,0,0-5.074,1.6L163.73,305.32a20.846,20.846,0,0,1-16.78,3.218l-18.638-4.425c14.81,56.671,66.441,98.615,127.688,98.615a131.176,131.176,0,0,0,71.888-21.355l-4.23-38.767a30.226,30.226,0,0,1,8.823-24.885Z" />
+                                                <path
+                                                    d="M156.835,295.5l16.225-11.388a20.729,20.729,0,0,1,11.968-3.781h24.129a20.9,20.9,0,0,1,18.891,12.053l5.968,12.843a8.83,8.83,0,0,0,15.08,1.568,8.871,8.871,0,0,0,1.62-3.725l5.932-32.945a8.856,8.856,0,0,0-4.86-9.521l-16.281-7.839A20.914,20.914,0,0,1,224.083,237.9l-3.115-16.312a20.765,20.765,0,0,1,9.048-21.335l23.173-15.174a8.84,8.84,0,0,0,3.876-8.822l-6.141-37.341c-70.419,2.678-126.884,60.79-126.884,131.852a132.353,132.353,0,0,0,1.574,20.371l24.108,5.723A8.819,8.819,0,0,0,156.835,295.5Z" />
+                                                <path
+                                                    d="M411.086,163.511a10.21,10.21,0,0,0,8.089-3.984,6,6,0,0,0,.965-1.833l9.969-31.043,27.578-17.566a5.976,5.976,0,0,0,1.526-1.393A10.242,10.242,0,0,0,450.754,91.2L418.7,86.914,402.66,74.529l22.03-28.522a9.694,9.694,0,0,0-1.745-13.6l-6.9-5.33a13.427,13.427,0,0,0-16.975.492l-26.911,23.4L329.612,18.105a24.474,24.474,0,0,0-29.921,38.738l42.546,32.863L326.4,121.658a13.425,13.425,0,0,0,3.811,16.545l6.9,5.333a9.622,9.622,0,0,0,5.906,2.023,9.84,9.84,0,0,0,1.255-.081,9.632,9.632,0,0,0,6.437-3.689l22.031-28.523,16.041,12.39,12.3,29.863a10.261,10.261,0,0,0,10.006,7.992ZM339.206,55.3a7.108,7.108,0,1,1-1.282-9.971h0A7.117,7.117,0,0,1,339.206,55.3ZM356.75,68.855a7.109,7.109,0,1,1-1.282-9.974h0a7.11,7.11,0,0,1,1.281,9.973Zm17.544,13.552a7.109,7.109,0,1,1-1.282-9.974h0a7.109,7.109,0,0,1,1.281,9.974Zm17.545,13.55a7.108,7.108,0,1,1-1.281-9.972l0,0A7.117,7.117,0,0,1,391.839,95.957Z" />
+                                                <path
+                                                    d="M308.548,481.527a5.857,5.857,0,0,0-1.375.164,216.778,216.778,0,0,1-30.536,5.1,5.867,5.867,0,0,0,1.1,11.683,229.168,229.168,0,0,0,32.191-5.376,5.867,5.867,0,0,0-1.383-11.57Z" />
+                                                <path
+                                                    d="M434.808,403.935a5.824,5.824,0,0,0-3.619-1.259,5.945,5.945,0,0,0-.7.042,5.824,5.824,0,0,0-3.917,2.2,219.217,219.217,0,0,1-20.842,22.911,5.867,5.867,0,0,0,8.1,8.492,230.571,230.571,0,0,0,21.962-24.144A5.874,5.874,0,0,0,434.808,403.935Z" />
+                                                <path
+                                                    d="M478.858,264.9a5.875,5.875,0,0,0-5.868,5.867,219.859,219.859,0,0,1-2.18,30.892,5.866,5.866,0,0,0,4.981,6.636,5.9,5.9,0,0,0,6.636-4.98,231.607,231.607,0,0,0,2.3-32.548A5.874,5.874,0,0,0,478.858,264.9Z" />
+                                                <path
+                                                    d="M235.37,486.791a217.177,217.177,0,0,1-30.537-5.1,5.867,5.867,0,1,0-2.757,11.406,228.987,228.987,0,0,0,32.192,5.375,5.867,5.867,0,1,0,1.1-11.683Z" />
+                                                <path
+                                                    d="M468.579,338.125a5.869,5.869,0,0,0-7.464,3.626,216.126,216.126,0,0,1-12.206,28.47,5.875,5.875,0,0,0,2.52,7.906,5.863,5.863,0,0,0,7.906-2.52,228.274,228.274,0,0,0,12.87-30.018,5.867,5.867,0,0,0-3.626-7.464Z" />
+                                                <path
+                                                    d="M376.469,452.419a5.842,5.842,0,0,0-3.167.932A216.956,216.956,0,0,1,346.155,468.2a5.869,5.869,0,0,0,2.444,11.206,5.81,5.81,0,0,0,2.436-.535,228.525,228.525,0,0,0,28.62-15.655,5.866,5.866,0,0,0-3.186-10.8Z" />
+                                                <path
+                                                    d="M50.882,341.746a5.863,5.863,0,0,0-7.464-3.625,5.867,5.867,0,0,0-3.626,7.462,228.1,228.1,0,0,0,12.862,30A5.867,5.867,0,1,0,63.08,370.2,216.413,216.413,0,0,1,50.882,341.746Z" />
+                                                <path
+                                                    d="M165.847,468.205a217.523,217.523,0,0,1-27.174-14.87,5.83,5.83,0,0,0-3.164-.935,5.942,5.942,0,0,0-1.254.135A5.869,5.869,0,0,0,132.32,463.2a229.106,229.106,0,0,0,28.646,15.67,5.8,5.8,0,0,0,2.436.535,5.868,5.868,0,0,0,2.445-11.2Z" />
+                                                <path
+                                                    d="M85.416,404.9a5.83,5.83,0,0,0-3.917-2.2,5.973,5.973,0,0,0-.7-.041,5.868,5.868,0,0,0-4.6,9.5A230.784,230.784,0,0,0,98.152,436.3a5.868,5.868,0,0,0,8.1-8.492A218.967,218.967,0,0,1,85.416,404.9Z" />
+                                                <path
+                                                    d="M36.026,234.342a5.861,5.861,0,0,0,6.867-4.658,216.219,216.219,0,0,1,7.994-29.907,5.868,5.868,0,0,0-11.09-3.838,228.3,228.3,0,0,0-8.43,31.536,5.87,5.87,0,0,0,4.659,6.867Z" />
+                                                <path
+                                                    d="M41.19,301.653a219.631,219.631,0,0,1-2.18-30.894,5.868,5.868,0,1,0-11.735.01,231.462,231.462,0,0,0,2.3,32.54,5.867,5.867,0,1,0,11.617-1.656Z" />
+                                                <path
+                                                    d="M84.452,128.382a5.874,5.874,0,0,0-8.24.98,230.145,230.145,0,0,0-18.323,27.019,5.87,5.87,0,0,0,5.073,8.808,5.894,5.894,0,0,0,5.085-2.93,217.875,217.875,0,0,1,17.384-25.636A5.877,5.877,0,0,0,84.452,128.382Z" />
+                                                <path
+                                                    d="M206.514,49.134a5.838,5.838,0,0,0-3.047-.862,5.942,5.942,0,0,0-1.39.167,227.526,227.526,0,0,0-31.1,9.93,5.867,5.867,0,1,0,4.364,10.892,216.147,216.147,0,0,1,29.489-9.417,5.867,5.867,0,0,0,1.681-10.71Z" />
+                                                <path
+                                                    d="M140.446,80.08a5.871,5.871,0,0,0-8.11-1.756,230.474,230.474,0,0,0-26.107,19.57,5.867,5.867,0,1,0,7.688,8.865A218.445,218.445,0,0,1,138.69,88.191,5.877,5.877,0,0,0,140.446,80.08Z" />
+                                                <path
+                                                    d="M245.125,42.3a5.881,5.881,0,0,0-3.647,10.243,5.731,5.731,0,0,0,4.191,1.48q5.143-.242,10.316-.242c6.9,0,13.816.323,20.654.968a5.867,5.867,0,1,0,1.1-11.682A232.02,232.02,0,0,0,245.125,42.3Z" />
+                                            </svg>
+                                            <h2 class="color_white font_18">@Title</h2>
+                                        </div>
+                                    </article>
+                                </a>
+                            </div>
+                        </face>
+                        <face filter="RowNumber=1">
+                            <div class="width_30 float-right right-img">
+                                <a href="@link">
+                                    <article class="p-relative">
+                                        <figure>
+                                            <img src="[##cms.cms.cdn##]/@image" width="368" height="490" alt="@title"
+                                                class="cover-image border-radius" />
+                                        </figure>
+                                        <div class="p-absolute title-card width_100">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
+                                                viewBox="0 0 512 512" width="50" height="50">
+                                                <path
+                                                    d="M473.185,201.955a6.869,6.869,0,0,0-9.884,7.959,215.578,215.578,0,0,1,6.52,30.115,6.9,6.9,0,0,0,6.791,5.9,7.192,7.192,0,0,0,.976-.069,6.876,6.876,0,0,0,5.83-7.768,229.26,229.26,0,0,0-6.937-32.043A6.823,6.823,0,0,0,473.185,201.955Z" />
+                                                <path
+                                                    d="M433.873,136.335a6.366,6.366,0,0,0-1.487,8.88,217.164,217.164,0,0,1,16.092,26.355,6.367,6.367,0,0,0,11.315-5.843,229.725,229.725,0,0,0-17.039-27.9A6.362,6.362,0,0,0,433.873,136.335Z" />
+                                                <path
+                                                    d="M354.4,203.744a18.4,18.4,0,0,0-7.146,10.417l-3.24,12.657a18.386,18.386,0,0,0,6.491,19.044,30.522,30.522,0,0,1,10.939,30.588l-6.547,29.2a30.331,30.331,0,0,1-8.267,14.941l-5.708,5.653a18.292,18.292,0,0,0-5.339,15.056l3.483,31.915a131.743,131.743,0,0,0,25.8-176.929Z" />
+                                                <path
+                                                    d="M338.19,312.068a18.352,18.352,0,0,0,5-9.04l6.547-29.2a18.469,18.469,0,0,0-6.619-18.508,30.385,30.385,0,0,1-10.727-31.474l3.24-12.657a30.423,30.423,0,0,1,11.81-17.217l10.2-7.264A131.793,131.793,0,0,0,263.1,139l5.807,35.309a20.848,20.848,0,0,1-9.143,20.808l-23.172,15.174a8.8,8.8,0,0,0-3.836,9.044l3.115,16.313a8.867,8.867,0,0,0,4.843,6.3l16.281,7.839a20.891,20.891,0,0,1,11.464,22.46l-5.932,32.945a20.929,20.929,0,0,1-3.82,8.786,20.641,20.641,0,0,1-16.622,8.357,21.45,21.45,0,0,1-2.214-.115,20.661,20.661,0,0,1-16.737-11.941l-5.967-12.843a8.86,8.86,0,0,0-8.009-5.11H185.028a8.787,8.787,0,0,0-5.074,1.6L163.73,305.32a20.846,20.846,0,0,1-16.78,3.218l-18.638-4.425c14.81,56.671,66.441,98.615,127.688,98.615a131.176,131.176,0,0,0,71.888-21.355l-4.23-38.767a30.226,30.226,0,0,1,8.823-24.885Z" />
+                                                <path
+                                                    d="M156.835,295.5l16.225-11.388a20.729,20.729,0,0,1,11.968-3.781h24.129a20.9,20.9,0,0,1,18.891,12.053l5.968,12.843a8.83,8.83,0,0,0,15.08,1.568,8.871,8.871,0,0,0,1.62-3.725l5.932-32.945a8.856,8.856,0,0,0-4.86-9.521l-16.281-7.839A20.914,20.914,0,0,1,224.083,237.9l-3.115-16.312a20.765,20.765,0,0,1,9.048-21.335l23.173-15.174a8.84,8.84,0,0,0,3.876-8.822l-6.141-37.341c-70.419,2.678-126.884,60.79-126.884,131.852a132.353,132.353,0,0,0,1.574,20.371l24.108,5.723A8.819,8.819,0,0,0,156.835,295.5Z" />
+                                                <path
+                                                    d="M411.086,163.511a10.21,10.21,0,0,0,8.089-3.984,6,6,0,0,0,.965-1.833l9.969-31.043,27.578-17.566a5.976,5.976,0,0,0,1.526-1.393A10.242,10.242,0,0,0,450.754,91.2L418.7,86.914,402.66,74.529l22.03-28.522a9.694,9.694,0,0,0-1.745-13.6l-6.9-5.33a13.427,13.427,0,0,0-16.975.492l-26.911,23.4L329.612,18.105a24.474,24.474,0,0,0-29.921,38.738l42.546,32.863L326.4,121.658a13.425,13.425,0,0,0,3.811,16.545l6.9,5.333a9.622,9.622,0,0,0,5.906,2.023,9.84,9.84,0,0,0,1.255-.081,9.632,9.632,0,0,0,6.437-3.689l22.031-28.523,16.041,12.39,12.3,29.863a10.261,10.261,0,0,0,10.006,7.992ZM339.206,55.3a7.108,7.108,0,1,1-1.282-9.971h0A7.117,7.117,0,0,1,339.206,55.3ZM356.75,68.855a7.109,7.109,0,1,1-1.282-9.974h0a7.11,7.11,0,0,1,1.281,9.973Zm17.544,13.552a7.109,7.109,0,1,1-1.282-9.974h0a7.109,7.109,0,0,1,1.281,9.974Zm17.545,13.55a7.108,7.108,0,1,1-1.281-9.972l0,0A7.117,7.117,0,0,1,391.839,95.957Z" />
+                                                <path
+                                                    d="M308.548,481.527a5.857,5.857,0,0,0-1.375.164,216.778,216.778,0,0,1-30.536,5.1,5.867,5.867,0,0,0,1.1,11.683,229.168,229.168,0,0,0,32.191-5.376,5.867,5.867,0,0,0-1.383-11.57Z" />
+                                                <path
+                                                    d="M434.808,403.935a5.824,5.824,0,0,0-3.619-1.259,5.945,5.945,0,0,0-.7.042,5.824,5.824,0,0,0-3.917,2.2,219.217,219.217,0,0,1-20.842,22.911,5.867,5.867,0,0,0,8.1,8.492,230.571,230.571,0,0,0,21.962-24.144A5.874,5.874,0,0,0,434.808,403.935Z" />
+                                                <path
+                                                    d="M478.858,264.9a5.875,5.875,0,0,0-5.868,5.867,219.859,219.859,0,0,1-2.18,30.892,5.866,5.866,0,0,0,4.981,6.636,5.9,5.9,0,0,0,6.636-4.98,231.607,231.607,0,0,0,2.3-32.548A5.874,5.874,0,0,0,478.858,264.9Z" />
+                                                <path
+                                                    d="M235.37,486.791a217.177,217.177,0,0,1-30.537-5.1,5.867,5.867,0,1,0-2.757,11.406,228.987,228.987,0,0,0,32.192,5.375,5.867,5.867,0,1,0,1.1-11.683Z" />
+                                                <path
+                                                    d="M468.579,338.125a5.869,5.869,0,0,0-7.464,3.626,216.126,216.126,0,0,1-12.206,28.47,5.875,5.875,0,0,0,2.52,7.906,5.863,5.863,0,0,0,7.906-2.52,228.274,228.274,0,0,0,12.87-30.018,5.867,5.867,0,0,0-3.626-7.464Z" />
+                                                <path
+                                                    d="M376.469,452.419a5.842,5.842,0,0,0-3.167.932A216.956,216.956,0,0,1,346.155,468.2a5.869,5.869,0,0,0,2.444,11.206,5.81,5.81,0,0,0,2.436-.535,228.525,228.525,0,0,0,28.62-15.655,5.866,5.866,0,0,0-3.186-10.8Z" />
+                                                <path
+                                                    d="M50.882,341.746a5.863,5.863,0,0,0-7.464-3.625,5.867,5.867,0,0,0-3.626,7.462,228.1,228.1,0,0,0,12.862,30A5.867,5.867,0,1,0,63.08,370.2,216.413,216.413,0,0,1,50.882,341.746Z" />
+                                                <path
+                                                    d="M165.847,468.205a217.523,217.523,0,0,1-27.174-14.87,5.83,5.83,0,0,0-3.164-.935,5.942,5.942,0,0,0-1.254.135A5.869,5.869,0,0,0,132.32,463.2a229.106,229.106,0,0,0,28.646,15.67,5.8,5.8,0,0,0,2.436.535,5.868,5.868,0,0,0,2.445-11.2Z" />
+                                                <path
+                                                    d="M85.416,404.9a5.83,5.83,0,0,0-3.917-2.2,5.973,5.973,0,0,0-.7-.041,5.868,5.868,0,0,0-4.6,9.5A230.784,230.784,0,0,0,98.152,436.3a5.868,5.868,0,0,0,8.1-8.492A218.967,218.967,0,0,1,85.416,404.9Z" />
+                                                <path
+                                                    d="M36.026,234.342a5.861,5.861,0,0,0,6.867-4.658,216.219,216.219,0,0,1,7.994-29.907,5.868,5.868,0,0,0-11.09-3.838,228.3,228.3,0,0,0-8.43,31.536,5.87,5.87,0,0,0,4.659,6.867Z" />
+                                                <path
+                                                    d="M41.19,301.653a219.631,219.631,0,0,1-2.18-30.894,5.868,5.868,0,1,0-11.735.01,231.462,231.462,0,0,0,2.3,32.54,5.867,5.867,0,1,0,11.617-1.656Z" />
+                                                <path
+                                                    d="M84.452,128.382a5.874,5.874,0,0,0-8.24.98,230.145,230.145,0,0,0-18.323,27.019,5.87,5.87,0,0,0,5.073,8.808,5.894,5.894,0,0,0,5.085-2.93,217.875,217.875,0,0,1,17.384-25.636A5.877,5.877,0,0,0,84.452,128.382Z" />
+                                                <path
+                                                    d="M206.514,49.134a5.838,5.838,0,0,0-3.047-.862,5.942,5.942,0,0,0-1.39.167,227.526,227.526,0,0,0-31.1,9.93,5.867,5.867,0,1,0,4.364,10.892,216.147,216.147,0,0,1,29.489-9.417,5.867,5.867,0,0,0,1.681-10.71Z" />
+                                                <path
+                                                    d="M140.446,80.08a5.871,5.871,0,0,0-8.11-1.756,230.474,230.474,0,0,0-26.107,19.57,5.867,5.867,0,1,0,7.688,8.865A218.445,218.445,0,0,1,138.69,88.191,5.877,5.877,0,0,0,140.446,80.08Z" />
+                                                <path
+                                                    d="M245.125,42.3a5.881,5.881,0,0,0-3.647,10.243,5.731,5.731,0,0,0,4.191,1.48q5.143-.242,10.316-.242c6.9,0,13.816.323,20.654.968a5.867,5.867,0,1,0,1.1-11.682A232.02,232.02,0,0,0,245.125,42.3Z" />
+                                            </svg>
+                                            <h2 class="color_white font_18">@Title</h2>
+                                        </div>
+                                    </article>
+                                </a>
+                            </div>
+                        </face>
+                        <face filter="RowNumber=2 and link is null">
+                            <div class="width_70 float-left left-img">
+                                <div class="width_98 float-left left-top-img border-radius p-relative">
+                                    <div class="width_39 float-right article-not-over">
+                                        <a href="article-list.bc?catid=@catID">
+                                            <article class="p-relative">
+                                                <figure>
+                                                    <img src="[##cms.cms.cdn##]/@image" width="320" height="240" alt="@title"
+                                                        class="cover-image border-radius" />
+                                                </figure>
+                                                <div class="p-absolute title-card width_100">
+                                                    <svg id="Layer_3" enable-background="new 0 0 64 64" height="50"
+                                                        viewBox="0 0 64 64" width="50"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g>
+                                                            <path
+                                                                d="m62.895 61.553-15-30c-.17-.339-.516-.553-.895-.553h-9.893l.126-.545c4.014-1.371 6.767-5.176 6.767-9.455 0-5.514-4.486-10-10-10s-10 4.486-10 10c0 4.279 2.753 8.084 6.767 9.455l.126.545h-13.893c-.379 0-.725.214-.895.553l-15 30c-.155.31-.139.678.044.973.183.294.504.474.851.474h60c.347 0 .668-.18.851-.474.182-.295.199-.663.044-.973zm-32.602-4.846 4.293 4.293h-3.172l-7.707-7.707c-.391-.391-1.023-.391-1.414 0l-7.707 7.707h-3.172l9.293-9.293c.391-.391.391-1.023 0-1.414l-7.824-7.824 1.057-2.115 4.352 4.352c.196.196.452.294.708.294s.512-.098.707-.293l5-5c.188-.187.293-.442.293-.707v-6h2v7.586l-5.707 5.707c-.391.391-.391 1.023 0 1.414l6 6c.195.195.451.293.707.293s.512-.098.707-.293l8.707-8.707h14.968l1 2h-14.382c-.266 0-.52.105-.707.293l-8 8c-.391.391-.391 1.023 0 1.414zm-1.707 4.293h-11.172l5.586-5.586zm-2.586-40c0-4.411 3.589-8 8-8s8 3.589 8 8c0 3.585-2.417 6.753-5.877 7.705-.354.098-.626.381-.709.739l-1.414 6.117-1.414-6.117c-.083-.358-.355-.642-.709-.739-3.46-.952-5.877-4.12-5.877-7.705zm7.025 19.225c.106.454.509.775.975.775s.869-.321.975-.775l1.67-7.225h9.737l5 10h-14.382c-.266 0-.52.105-.707.293l-8.293 8.293-4.586-4.586 5.293-5.293c.188-.187.293-.442.293-.707v-8h2.355zm-15.407-7.225h5.382v5.586l-4 4-4.117-4.117zm-5.677 11.355 6.645 6.645-10 10h-4.968zm25.473 16.645-5-5 7-7h14.968l4 8h-4.847l-3.703-5.555c-.166-.25-.436-.411-.733-.44-.302-.031-.594.077-.806.288l-1.893 1.892-1.532-2.682c-.355-.623-1.381-.623-1.736 0l-3.712 6.497h-2.42v2h22.382l1 2zm8.863-4h-4.554l2.277-3.984zm2.303 0-1.151-2.015 1.416-1.415 2.287 3.43z" />
+                                                            <path
+                                                                d="m38 21h2c0-3.309-2.691-6-6-6v2c2.206 0 4 1.794 4 4z" />
+                                                            <path
+                                                                d="m36.399 24.2 1.201 1.6c.83-.624 1.486-1.453 1.899-2.4l-1.832-.8c-.274.631-.713 1.184-1.268 1.6z" />
+                                                            <path
+                                                                d="m4 15c-.334 0-.646.167-.832.445l-2 3c-.224.336-.224.773 0 1.109l2 3c.186.279.498.446.832.446h5v9c0 .552.447 1 1 1h4c.553 0 1-.448 1-1v-9h7c.369 0 .708-.203.882-.528s.154-.72-.05-1.026l-1.63-2.446 1.63-2.445c.204-.307.224-.701.05-1.026s-.513-.529-.882-.529h-7v-2h5c.334 0 .646-.167.832-.445l2-3c.224-.336.224-.773 0-1.109l-2-3c-.186-.279-.498-.446-.832-.446h-5v-3c0-.552-.447-1-1-1h-4c-.553 0-1 .448-1 1v3h-7c-.369 0-.708.203-.882.528s-.154.72.05 1.026l1.63 2.446-1.63 2.445c-.204.307-.224.701-.05 1.026s.513.529.882.529h7v2zm9 16h-2v-8h2zm6.168-11.445.964 1.445h-15.597l-1.333-2 1.333-2h15.597l-.964 1.445c-.224.336-.224.774 0 1.11zm-8.168-16.555h2v2h-2zm-6.168 5.445-.964-1.445h15.597l1.333 2-1.333 2h-15.597l.964-1.445c.224-.336.224-.774 0-1.11zm6.168 4.555h2v2h-2z" />
+                                                            <path d="m5 18h2v2h-2z" />
+                                                            <path d="m9 18h2v2h-2z" />
+                                                            <path d="m17 8h2v2h-2z" />
+                                                            <path d="m13 8h2v2h-2z" />
+                                                        </g>
+                                                    </svg>
+                                                    <h2 class="color_white font_18"> @title</h2>
+                                                </div>
+                                            </article>
+                                        </a>
+                                    </div>
+                        </face>
+                        <face filter="RowNumber=2">
+                            <div class="width_70 float-left left-img">
+                                <div class="width_98 float-left left-top-img border-radius p-relative">
+                                    <div class="width_39 float-right article-not-over">
+                                        <a href="@link">
+                                            <article class="p-relative">
+                                                <figure>
+                                                    <img src="[##cms.cms.cdn##]/@image" width="320" height="240" alt="@title"
+                                                        class="cover-image border-radius" />
+                                                </figure>
+                                                <div class="p-absolute title-card width_100">
+                                                    <svg id="Layer_3" enable-background="new 0 0 64 64" height="50"
+                                                        viewBox="0 0 64 64" width="50"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g>
+                                                            <path
+                                                                d="m62.895 61.553-15-30c-.17-.339-.516-.553-.895-.553h-9.893l.126-.545c4.014-1.371 6.767-5.176 6.767-9.455 0-5.514-4.486-10-10-10s-10 4.486-10 10c0 4.279 2.753 8.084 6.767 9.455l.126.545h-13.893c-.379 0-.725.214-.895.553l-15 30c-.155.31-.139.678.044.973.183.294.504.474.851.474h60c.347 0 .668-.18.851-.474.182-.295.199-.663.044-.973zm-32.602-4.846 4.293 4.293h-3.172l-7.707-7.707c-.391-.391-1.023-.391-1.414 0l-7.707 7.707h-3.172l9.293-9.293c.391-.391.391-1.023 0-1.414l-7.824-7.824 1.057-2.115 4.352 4.352c.196.196.452.294.708.294s.512-.098.707-.293l5-5c.188-.187.293-.442.293-.707v-6h2v7.586l-5.707 5.707c-.391.391-.391 1.023 0 1.414l6 6c.195.195.451.293.707.293s.512-.098.707-.293l8.707-8.707h14.968l1 2h-14.382c-.266 0-.52.105-.707.293l-8 8c-.391.391-.391 1.023 0 1.414zm-1.707 4.293h-11.172l5.586-5.586zm-2.586-40c0-4.411 3.589-8 8-8s8 3.589 8 8c0 3.585-2.417 6.753-5.877 7.705-.354.098-.626.381-.709.739l-1.414 6.117-1.414-6.117c-.083-.358-.355-.642-.709-.739-3.46-.952-5.877-4.12-5.877-7.705zm7.025 19.225c.106.454.509.775.975.775s.869-.321.975-.775l1.67-7.225h9.737l5 10h-14.382c-.266 0-.52.105-.707.293l-8.293 8.293-4.586-4.586 5.293-5.293c.188-.187.293-.442.293-.707v-8h2.355zm-15.407-7.225h5.382v5.586l-4 4-4.117-4.117zm-5.677 11.355 6.645 6.645-10 10h-4.968zm25.473 16.645-5-5 7-7h14.968l4 8h-4.847l-3.703-5.555c-.166-.25-.436-.411-.733-.44-.302-.031-.594.077-.806.288l-1.893 1.892-1.532-2.682c-.355-.623-1.381-.623-1.736 0l-3.712 6.497h-2.42v2h22.382l1 2zm8.863-4h-4.554l2.277-3.984zm2.303 0-1.151-2.015 1.416-1.415 2.287 3.43z" />
+                                                            <path
+                                                                d="m38 21h2c0-3.309-2.691-6-6-6v2c2.206 0 4 1.794 4 4z" />
+                                                            <path
+                                                                d="m36.399 24.2 1.201 1.6c.83-.624 1.486-1.453 1.899-2.4l-1.832-.8c-.274.631-.713 1.184-1.268 1.6z" />
+                                                            <path
+                                                                d="m4 15c-.334 0-.646.167-.832.445l-2 3c-.224.336-.224.773 0 1.109l2 3c.186.279.498.446.832.446h5v9c0 .552.447 1 1 1h4c.553 0 1-.448 1-1v-9h7c.369 0 .708-.203.882-.528s.154-.72-.05-1.026l-1.63-2.446 1.63-2.445c.204-.307.224-.701.05-1.026s-.513-.529-.882-.529h-7v-2h5c.334 0 .646-.167.832-.445l2-3c.224-.336.224-.773 0-1.109l-2-3c-.186-.279-.498-.446-.832-.446h-5v-3c0-.552-.447-1-1-1h-4c-.553 0-1 .448-1 1v3h-7c-.369 0-.708.203-.882.528s-.154.72.05 1.026l1.63 2.446-1.63 2.445c-.204.307-.224.701-.05 1.026s.513.529.882.529h7v2zm9 16h-2v-8h2zm6.168-11.445.964 1.445h-15.597l-1.333-2 1.333-2h15.597l-.964 1.445c-.224.336-.224.774 0 1.11zm-8.168-16.555h2v2h-2zm-6.168 5.445-.964-1.445h15.597l1.333 2-1.333 2h-15.597l.964-1.445c.224-.336.224-.774 0-1.11zm6.168 4.555h2v2h-2z" />
+                                                            <path d="m5 18h2v2h-2z" />
+                                                            <path d="m9 18h2v2h-2z" />
+                                                            <path d="m17 8h2v2h-2z" />
+                                                            <path d="m13 8h2v2h-2z" />
+                                                        </g>
+                                                    </svg>
+                                                    <h2 class="color_white font_18"> @title</h2>
+                                                </div>
+                                            </article>
+                                        </a>
+                                    </div>
+                        </face>
+                        <face filter="RowNumber=3 and link is null">
+                            <div class="width_59 float-left article-not-over">
+                                <a href="article-list.bc?catid=@catID">
+                                    <article class="p-relative">
+                                        <figure>
+                                            <img src="[##cms.cms.cdn##]/@image" width="486" height="240" alt="@title"
+                                                class="cover-image border-radius" />
+                                        </figure>
+                                        <div class="p-absolute title-card width_100">
+                                            <svg id="Layer_3" enable-background="new 0 0 64 64" height="50"
+                                                viewBox="0 0 64 64" width="50" xmlns="http://www.w3.org/2000/svg">
+                                                <g>
+                                                    <path
+                                                        d="m62.895 61.553-15-30c-.17-.339-.516-.553-.895-.553h-9.893l.126-.545c4.014-1.371 6.767-5.176 6.767-9.455 0-5.514-4.486-10-10-10s-10 4.486-10 10c0 4.279 2.753 8.084 6.767 9.455l.126.545h-13.893c-.379 0-.725.214-.895.553l-15 30c-.155.31-.139.678.044.973.183.294.504.474.851.474h60c.347 0 .668-.18.851-.474.182-.295.199-.663.044-.973zm-32.602-4.846 4.293 4.293h-3.172l-7.707-7.707c-.391-.391-1.023-.391-1.414 0l-7.707 7.707h-3.172l9.293-9.293c.391-.391.391-1.023 0-1.414l-7.824-7.824 1.057-2.115 4.352 4.352c.196.196.452.294.708.294s.512-.098.707-.293l5-5c.188-.187.293-.442.293-.707v-6h2v7.586l-5.707 5.707c-.391.391-.391 1.023 0 1.414l6 6c.195.195.451.293.707.293s.512-.098.707-.293l8.707-8.707h14.968l1 2h-14.382c-.266 0-.52.105-.707.293l-8 8c-.391.391-.391 1.023 0 1.414zm-1.707 4.293h-11.172l5.586-5.586zm-2.586-40c0-4.411 3.589-8 8-8s8 3.589 8 8c0 3.585-2.417 6.753-5.877 7.705-.354.098-.626.381-.709.739l-1.414 6.117-1.414-6.117c-.083-.358-.355-.642-.709-.739-3.46-.952-5.877-4.12-5.877-7.705zm7.025 19.225c.106.454.509.775.975.775s.869-.321.975-.775l1.67-7.225h9.737l5 10h-14.382c-.266 0-.52.105-.707.293l-8.293 8.293-4.586-4.586 5.293-5.293c.188-.187.293-.442.293-.707v-8h2.355zm-15.407-7.225h5.382v5.586l-4 4-4.117-4.117zm-5.677 11.355 6.645 6.645-10 10h-4.968zm25.473 16.645-5-5 7-7h14.968l4 8h-4.847l-3.703-5.555c-.166-.25-.436-.411-.733-.44-.302-.031-.594.077-.806.288l-1.893 1.892-1.532-2.682c-.355-.623-1.381-.623-1.736 0l-3.712 6.497h-2.42v2h22.382l1 2zm8.863-4h-4.554l2.277-3.984zm2.303 0-1.151-2.015 1.416-1.415 2.287 3.43z" />
+                                                    <path d="m38 21h2c0-3.309-2.691-6-6-6v2c2.206 0 4 1.794 4 4z" />
+                                                    <path
+                                                        d="m36.399 24.2 1.201 1.6c.83-.624 1.486-1.453 1.899-2.4l-1.832-.8c-.274.631-.713 1.184-1.268 1.6z" />
+                                                    <path
+                                                        d="m4 15c-.334 0-.646.167-.832.445l-2 3c-.224.336-.224.773 0 1.109l2 3c.186.279.498.446.832.446h5v9c0 .552.447 1 1 1h4c.553 0 1-.448 1-1v-9h7c.369 0 .708-.203.882-.528s.154-.72-.05-1.026l-1.63-2.446 1.63-2.445c.204-.307.224-.701.05-1.026s-.513-.529-.882-.529h-7v-2h5c.334 0 .646-.167.832-.445l2-3c.224-.336.224-.773 0-1.109l-2-3c-.186-.279-.498-.446-.832-.446h-5v-3c0-.552-.447-1-1-1h-4c-.553 0-1 .448-1 1v3h-7c-.369 0-.708.203-.882.528s-.154.72.05 1.026l1.63 2.446-1.63 2.445c-.204.307-.224.701-.05 1.026s.513.529.882.529h7v2zm9 16h-2v-8h2zm6.168-11.445.964 1.445h-15.597l-1.333-2 1.333-2h15.597l-.964 1.445c-.224.336-.224.774 0 1.11zm-8.168-16.555h2v2h-2zm-6.168 5.445-.964-1.445h15.597l1.333 2-1.333 2h-15.597l.964-1.445c.224-.336.224-.774 0-1.11zm6.168 4.555h2v2h-2z" />
+                                                    <path d="m5 18h2v2h-2z" />
+                                                    <path d="m9 18h2v2h-2z" />
+                                                    <path d="m17 8h2v2h-2z" />
+                                                    <path d="m13 8h2v2h-2z" />
+                                                </g>
+                                            </svg>
+                                            <h2 class="color_white font_18">@title</h2>
+                                        </div>
+                                    </article>
+                                </a>
+                            </div>
+                </div>
+                </face>
+                <face filter="RowNumber=3">
+                    <div class="width_59 float-left article-not-over">
+                        <a href="@link">
+                            <article class="p-relative">
+                                <figure>
+                                    <img src="[##cms.cms.cdn##]/@image" width="486" height="240" alt="@title"
+                                        class="cover-image border-radius" />
+                                </figure>
+                                <div class="p-absolute title-card width_100">
+                                    <svg id="Layer_3" enable-background="new 0 0 64 64" height="50" viewBox="0 0 64 64"
+                                        width="50" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path
+                                                d="m62.895 61.553-15-30c-.17-.339-.516-.553-.895-.553h-9.893l.126-.545c4.014-1.371 6.767-5.176 6.767-9.455 0-5.514-4.486-10-10-10s-10 4.486-10 10c0 4.279 2.753 8.084 6.767 9.455l.126.545h-13.893c-.379 0-.725.214-.895.553l-15 30c-.155.31-.139.678.044.973.183.294.504.474.851.474h60c.347 0 .668-.18.851-.474.182-.295.199-.663.044-.973zm-32.602-4.846 4.293 4.293h-3.172l-7.707-7.707c-.391-.391-1.023-.391-1.414 0l-7.707 7.707h-3.172l9.293-9.293c.391-.391.391-1.023 0-1.414l-7.824-7.824 1.057-2.115 4.352 4.352c.196.196.452.294.708.294s.512-.098.707-.293l5-5c.188-.187.293-.442.293-.707v-6h2v7.586l-5.707 5.707c-.391.391-.391 1.023 0 1.414l6 6c.195.195.451.293.707.293s.512-.098.707-.293l8.707-8.707h14.968l1 2h-14.382c-.266 0-.52.105-.707.293l-8 8c-.391.391-.391 1.023 0 1.414zm-1.707 4.293h-11.172l5.586-5.586zm-2.586-40c0-4.411 3.589-8 8-8s8 3.589 8 8c0 3.585-2.417 6.753-5.877 7.705-.354.098-.626.381-.709.739l-1.414 6.117-1.414-6.117c-.083-.358-.355-.642-.709-.739-3.46-.952-5.877-4.12-5.877-7.705zm7.025 19.225c.106.454.509.775.975.775s.869-.321.975-.775l1.67-7.225h9.737l5 10h-14.382c-.266 0-.52.105-.707.293l-8.293 8.293-4.586-4.586 5.293-5.293c.188-.187.293-.442.293-.707v-8h2.355zm-15.407-7.225h5.382v5.586l-4 4-4.117-4.117zm-5.677 11.355 6.645 6.645-10 10h-4.968zm25.473 16.645-5-5 7-7h14.968l4 8h-4.847l-3.703-5.555c-.166-.25-.436-.411-.733-.44-.302-.031-.594.077-.806.288l-1.893 1.892-1.532-2.682c-.355-.623-1.381-.623-1.736 0l-3.712 6.497h-2.42v2h22.382l1 2zm8.863-4h-4.554l2.277-3.984zm2.303 0-1.151-2.015 1.416-1.415 2.287 3.43z" />
+                                            <path d="m38 21h2c0-3.309-2.691-6-6-6v2c2.206 0 4 1.794 4 4z" />
+                                            <path
+                                                d="m36.399 24.2 1.201 1.6c.83-.624 1.486-1.453 1.899-2.4l-1.832-.8c-.274.631-.713 1.184-1.268 1.6z" />
+                                            <path
+                                                d="m4 15c-.334 0-.646.167-.832.445l-2 3c-.224.336-.224.773 0 1.109l2 3c.186.279.498.446.832.446h5v9c0 .552.447 1 1 1h4c.553 0 1-.448 1-1v-9h7c.369 0 .708-.203.882-.528s.154-.72-.05-1.026l-1.63-2.446 1.63-2.445c.204-.307.224-.701.05-1.026s-.513-.529-.882-.529h-7v-2h5c.334 0 .646-.167.832-.445l2-3c.224-.336.224-.773 0-1.109l-2-3c-.186-.279-.498-.446-.832-.446h-5v-3c0-.552-.447-1-1-1h-4c-.553 0-1 .448-1 1v3h-7c-.369 0-.708.203-.882.528s-.154.72.05 1.026l1.63 2.446-1.63 2.445c-.204.307-.224.701-.05 1.026s.513.529.882.529h7v2zm9 16h-2v-8h2zm6.168-11.445.964 1.445h-15.597l-1.333-2 1.333-2h15.597l-.964 1.445c-.224.336-.224.774 0 1.11zm-8.168-16.555h2v2h-2zm-6.168 5.445-.964-1.445h15.597l1.333 2-1.333 2h-15.597l.964-1.445c.224-.336.224-.774 0-1.11zm6.168 4.555h2v2h-2z" />
+                                            <path d="m5 18h2v2h-2z" />
+                                            <path d="m9 18h2v2h-2z" />
+                                            <path d="m17 8h2v2h-2z" />
+                                            <path d="m13 8h2v2h-2z" />
+                                        </g>
+                                    </svg>
+                                    <h2 class="color_white font_18">@title</h2>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+                    </div>
+                </face>
+                <face filter="RowNumber=4 and link is null">
+                    <div class="width_98 float-left left-bottom-img border-radius">
+                        <div class="width_59 float-right article-not-over">
+                            <a href="article-list.bc?catid=@catID">
+                                <article class="p-relative">
+                                    <figure>
+                                        <img src="[##cms.cms.cdn##]/@image" width="486" height="240" alt="@title"
+                                            class="cover-image border-radius" />
+                                    </figure>
+                                    <div class="p-absolute title-card width_100">
+                                        <svg id="Layer_3" enable-background="new 0 0 64 64" height="50"
+                                            viewBox="0 0 64 64" width="50" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path
+                                                    d="m62.895 61.553-15-30c-.17-.339-.516-.553-.895-.553h-9.893l.126-.545c4.014-1.371 6.767-5.176 6.767-9.455 0-5.514-4.486-10-10-10s-10 4.486-10 10c0 4.279 2.753 8.084 6.767 9.455l.126.545h-13.893c-.379 0-.725.214-.895.553l-15 30c-.155.31-.139.678.044.973.183.294.504.474.851.474h60c.347 0 .668-.18.851-.474.182-.295.199-.663.044-.973zm-32.602-4.846 4.293 4.293h-3.172l-7.707-7.707c-.391-.391-1.023-.391-1.414 0l-7.707 7.707h-3.172l9.293-9.293c.391-.391.391-1.023 0-1.414l-7.824-7.824 1.057-2.115 4.352 4.352c.196.196.452.294.708.294s.512-.098.707-.293l5-5c.188-.187.293-.442.293-.707v-6h2v7.586l-5.707 5.707c-.391.391-.391 1.023 0 1.414l6 6c.195.195.451.293.707.293s.512-.098.707-.293l8.707-8.707h14.968l1 2h-14.382c-.266 0-.52.105-.707.293l-8 8c-.391.391-.391 1.023 0 1.414zm-1.707 4.293h-11.172l5.586-5.586zm-2.586-40c0-4.411 3.589-8 8-8s8 3.589 8 8c0 3.585-2.417 6.753-5.877 7.705-.354.098-.626.381-.709.739l-1.414 6.117-1.414-6.117c-.083-.358-.355-.642-.709-.739-3.46-.952-5.877-4.12-5.877-7.705zm7.025 19.225c.106.454.509.775.975.775s.869-.321.975-.775l1.67-7.225h9.737l5 10h-14.382c-.266 0-.52.105-.707.293l-8.293 8.293-4.586-4.586 5.293-5.293c.188-.187.293-.442.293-.707v-8h2.355zm-15.407-7.225h5.382v5.586l-4 4-4.117-4.117zm-5.677 11.355 6.645 6.645-10 10h-4.968zm25.473 16.645-5-5 7-7h14.968l4 8h-4.847l-3.703-5.555c-.166-.25-.436-.411-.733-.44-.302-.031-.594.077-.806.288l-1.893 1.892-1.532-2.682c-.355-.623-1.381-.623-1.736 0l-3.712 6.497h-2.42v2h22.382l1 2zm8.863-4h-4.554l2.277-3.984zm2.303 0-1.151-2.015 1.416-1.415 2.287 3.43z" />
+                                                <path d="m38 21h2c0-3.309-2.691-6-6-6v2c2.206 0 4 1.794 4 4z" />
+                                                <path
+                                                    d="m36.399 24.2 1.201 1.6c.83-.624 1.486-1.453 1.899-2.4l-1.832-.8c-.274.631-.713 1.184-1.268 1.6z" />
+                                                <path
+                                                    d="m4 15c-.334 0-.646.167-.832.445l-2 3c-.224.336-.224.773 0 1.109l2 3c.186.279.498.446.832.446h5v9c0 .552.447 1 1 1h4c.553 0 1-.448 1-1v-9h7c.369 0 .708-.203.882-.528s.154-.72-.05-1.026l-1.63-2.446 1.63-2.445c.204-.307.224-.701.05-1.026s-.513-.529-.882-.529h-7v-2h5c.334 0 .646-.167.832-.445l2-3c.224-.336.224-.773 0-1.109l-2-3c-.186-.279-.498-.446-.832-.446h-5v-3c0-.552-.447-1-1-1h-4c-.553 0-1 .448-1 1v3h-7c-.369 0-.708.203-.882.528s-.154.72.05 1.026l1.63 2.446-1.63 2.445c-.204.307-.224.701-.05 1.026s.513.529.882.529h7v2zm9 16h-2v-8h2zm6.168-11.445.964 1.445h-15.597l-1.333-2 1.333-2h15.597l-.964 1.445c-.224.336-.224.774 0 1.11zm-8.168-16.555h2v2h-2zm-6.168 5.445-.964-1.445h15.597l1.333 2-1.333 2h-15.597l.964-1.445c.224-.336.224-.774 0-1.11zm6.168 4.555h2v2h-2z" />
+                                                <path d="m5 18h2v2h-2z" />
+                                                <path d="m9 18h2v2h-2z" />
+                                                <path d="m17 8h2v2h-2z" />
+                                                <path d="m13 8h2v2h-2z" />
+                                            </g>
+                                        </svg>
+                                        <h2 class="color_white font_18">@title</h2>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+                </face>
+                <face filter="RowNumber=4">
+                    <div class="width_98 float-left left-bottom-img border-radius">
+                        <div class="width_59 float-right article-not-over">
+                            <a href="@link">
+                                <article class="p-relative">
+                                    <figure>
+                                        <img src="[##cms.cms.cdn##]/@image" width="486" height="240" alt="@title"
+                                            class="cover-image border-radius" />
+                                    </figure>
+                                    <div class="p-absolute title-card width_100">
+                                        <svg id="Layer_3" enable-background="new 0 0 64 64" height="50"
+                                            viewBox="0 0 64 64" width="50" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path
+                                                    d="m62.895 61.553-15-30c-.17-.339-.516-.553-.895-.553h-9.893l.126-.545c4.014-1.371 6.767-5.176 6.767-9.455 0-5.514-4.486-10-10-10s-10 4.486-10 10c0 4.279 2.753 8.084 6.767 9.455l.126.545h-13.893c-.379 0-.725.214-.895.553l-15 30c-.155.31-.139.678.044.973.183.294.504.474.851.474h60c.347 0 .668-.18.851-.474.182-.295.199-.663.044-.973zm-32.602-4.846 4.293 4.293h-3.172l-7.707-7.707c-.391-.391-1.023-.391-1.414 0l-7.707 7.707h-3.172l9.293-9.293c.391-.391.391-1.023 0-1.414l-7.824-7.824 1.057-2.115 4.352 4.352c.196.196.452.294.708.294s.512-.098.707-.293l5-5c.188-.187.293-.442.293-.707v-6h2v7.586l-5.707 5.707c-.391.391-.391 1.023 0 1.414l6 6c.195.195.451.293.707.293s.512-.098.707-.293l8.707-8.707h14.968l1 2h-14.382c-.266 0-.52.105-.707.293l-8 8c-.391.391-.391 1.023 0 1.414zm-1.707 4.293h-11.172l5.586-5.586zm-2.586-40c0-4.411 3.589-8 8-8s8 3.589 8 8c0 3.585-2.417 6.753-5.877 7.705-.354.098-.626.381-.709.739l-1.414 6.117-1.414-6.117c-.083-.358-.355-.642-.709-.739-3.46-.952-5.877-4.12-5.877-7.705zm7.025 19.225c.106.454.509.775.975.775s.869-.321.975-.775l1.67-7.225h9.737l5 10h-14.382c-.266 0-.52.105-.707.293l-8.293 8.293-4.586-4.586 5.293-5.293c.188-.187.293-.442.293-.707v-8h2.355zm-15.407-7.225h5.382v5.586l-4 4-4.117-4.117zm-5.677 11.355 6.645 6.645-10 10h-4.968zm25.473 16.645-5-5 7-7h14.968l4 8h-4.847l-3.703-5.555c-.166-.25-.436-.411-.733-.44-.302-.031-.594.077-.806.288l-1.893 1.892-1.532-2.682c-.355-.623-1.381-.623-1.736 0l-3.712 6.497h-2.42v2h22.382l1 2zm8.863-4h-4.554l2.277-3.984zm2.303 0-1.151-2.015 1.416-1.415 2.287 3.43z" />
+                                                <path d="m38 21h2c0-3.309-2.691-6-6-6v2c2.206 0 4 1.794 4 4z" />
+                                                <path
+                                                    d="m36.399 24.2 1.201 1.6c.83-.624 1.486-1.453 1.899-2.4l-1.832-.8c-.274.631-.713 1.184-1.268 1.6z" />
+                                                <path
+                                                    d="m4 15c-.334 0-.646.167-.832.445l-2 3c-.224.336-.224.773 0 1.109l2 3c.186.279.498.446.832.446h5v9c0 .552.447 1 1 1h4c.553 0 1-.448 1-1v-9h7c.369 0 .708-.203.882-.528s.154-.72-.05-1.026l-1.63-2.446 1.63-2.445c.204-.307.224-.701.05-1.026s-.513-.529-.882-.529h-7v-2h5c.334 0 .646-.167.832-.445l2-3c.224-.336.224-.773 0-1.109l-2-3c-.186-.279-.498-.446-.832-.446h-5v-3c0-.552-.447-1-1-1h-4c-.553 0-1 .448-1 1v3h-7c-.369 0-.708.203-.882.528s-.154.72.05 1.026l1.63 2.446-1.63 2.445c-.204.307-.224.701-.05 1.026s.513.529.882.529h7v2zm9 16h-2v-8h2zm6.168-11.445.964 1.445h-15.597l-1.333-2 1.333-2h15.597l-.964 1.445c-.224.336-.224.774 0 1.11zm-8.168-16.555h2v2h-2zm-6.168 5.445-.964-1.445h15.597l1.333 2-1.333 2h-15.597l.964-1.445c.224-.336.224-.774 0-1.11zm6.168 4.555h2v2h-2z" />
+                                                <path d="m5 18h2v2h-2z" />
+                                                <path d="m9 18h2v2h-2z" />
+                                                <path d="m17 8h2v2h-2z" />
+                                                <path d="m13 8h2v2h-2z" />
+                                            </g>
+                                        </svg>
+                                        <h2 class="color_white font_18">@title</h2>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+                </face>
+                <face filter="RowNumber=5 and link is null">
+                    <div class="width_39 float-left article-not-over">
+                        <a href="article-list.bc?catid=@catID">
+                            <article class="p-relative">
+                                <figure>
+                                    <img src="[##cms.cms.cdn##]/@image" width="320" height="240" alt="@title"
+                                        class="cover-image border-radius" />
+                                </figure>
+                                <div class="p-absolute title-card width_100">
+                                    <svg id="Layer_3" enable-background="new 0 0 64 64" height="50" viewBox="0 0 64 64"
+                                        width="50" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path
+                                                d="m62.895 61.553-15-30c-.17-.339-.516-.553-.895-.553h-9.893l.126-.545c4.014-1.371 6.767-5.176 6.767-9.455 0-5.514-4.486-10-10-10s-10 4.486-10 10c0 4.279 2.753 8.084 6.767 9.455l.126.545h-13.893c-.379 0-.725.214-.895.553l-15 30c-.155.31-.139.678.044.973.183.294.504.474.851.474h60c.347 0 .668-.18.851-.474.182-.295.199-.663.044-.973zm-32.602-4.846 4.293 4.293h-3.172l-7.707-7.707c-.391-.391-1.023-.391-1.414 0l-7.707 7.707h-3.172l9.293-9.293c.391-.391.391-1.023 0-1.414l-7.824-7.824 1.057-2.115 4.352 4.352c.196.196.452.294.708.294s.512-.098.707-.293l5-5c.188-.187.293-.442.293-.707v-6h2v7.586l-5.707 5.707c-.391.391-.391 1.023 0 1.414l6 6c.195.195.451.293.707.293s.512-.098.707-.293l8.707-8.707h14.968l1 2h-14.382c-.266 0-.52.105-.707.293l-8 8c-.391.391-.391 1.023 0 1.414zm-1.707 4.293h-11.172l5.586-5.586zm-2.586-40c0-4.411 3.589-8 8-8s8 3.589 8 8c0 3.585-2.417 6.753-5.877 7.705-.354.098-.626.381-.709.739l-1.414 6.117-1.414-6.117c-.083-.358-.355-.642-.709-.739-3.46-.952-5.877-4.12-5.877-7.705zm7.025 19.225c.106.454.509.775.975.775s.869-.321.975-.775l1.67-7.225h9.737l5 10h-14.382c-.266 0-.52.105-.707.293l-8.293 8.293-4.586-4.586 5.293-5.293c.188-.187.293-.442.293-.707v-8h2.355zm-15.407-7.225h5.382v5.586l-4 4-4.117-4.117zm-5.677 11.355 6.645 6.645-10 10h-4.968zm25.473 16.645-5-5 7-7h14.968l4 8h-4.847l-3.703-5.555c-.166-.25-.436-.411-.733-.44-.302-.031-.594.077-.806.288l-1.893 1.892-1.532-2.682c-.355-.623-1.381-.623-1.736 0l-3.712 6.497h-2.42v2h22.382l1 2zm8.863-4h-4.554l2.277-3.984zm2.303 0-1.151-2.015 1.416-1.415 2.287 3.43z" />
+                                            <path d="m38 21h2c0-3.309-2.691-6-6-6v2c2.206 0 4 1.794 4 4z" />
+                                            <path
+                                                d="m36.399 24.2 1.201 1.6c.83-.624 1.486-1.453 1.899-2.4l-1.832-.8c-.274.631-.713 1.184-1.268 1.6z" />
+                                            <path
+                                                d="m4 15c-.334 0-.646.167-.832.445l-2 3c-.224.336-.224.773 0 1.109l2 3c.186.279.498.446.832.446h5v9c0 .552.447 1 1 1h4c.553 0 1-.448 1-1v-9h7c.369 0 .708-.203.882-.528s.154-.72-.05-1.026l-1.63-2.446 1.63-2.445c.204-.307.224-.701.05-1.026s-.513-.529-.882-.529h-7v-2h5c.334 0 .646-.167.832-.445l2-3c.224-.336.224-.773 0-1.109l-2-3c-.186-.279-.498-.446-.832-.446h-5v-3c0-.552-.447-1-1-1h-4c-.553 0-1 .448-1 1v3h-7c-.369 0-.708.203-.882.528s-.154.72.05 1.026l1.63 2.446-1.63 2.445c-.204.307-.224.701-.05 1.026s.513.529.882.529h7v2zm9 16h-2v-8h2zm6.168-11.445.964 1.445h-15.597l-1.333-2 1.333-2h15.597l-.964 1.445c-.224.336-.224.774 0 1.11zm-8.168-16.555h2v2h-2zm-6.168 5.445-.964-1.445h15.597l1.333 2-1.333 2h-15.597l.964-1.445c.224-.336.224-.774 0-1.11zm6.168 4.555h2v2h-2z" />
+                                            <path d="m5 18h2v2h-2z" />
+                                            <path d="m9 18h2v2h-2z" />
+                                            <path d="m17 8h2v2h-2z" />
+                                            <path d="m13 8h2v2h-2z" />
+                                        </g>
+                                    </svg>
+                                    <h2 class="color_white font_18">@title</h2>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+                    </div>
+                    </div>
+                </face>
+                <face filter="RowNumber=5">
+                    <div class="width_39 float-left article-not-over">
+                        <a href="@link">
+                            <article class="p-relative">
+                                <figure>
+                                    <img src="[##cms.cms.cdn##]/@image" width="320" height="240" alt="@title"
+                                        class="cover-image border-radius" />
+                                </figure>
+                                <div class="p-absolute title-card width_100">
+                                    <svg id="Layer_3" enable-background="new 0 0 64 64" height="50" viewBox="0 0 64 64"
+                                        width="50" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path
+                                                d="m62.895 61.553-15-30c-.17-.339-.516-.553-.895-.553h-9.893l.126-.545c4.014-1.371 6.767-5.176 6.767-9.455 0-5.514-4.486-10-10-10s-10 4.486-10 10c0 4.279 2.753 8.084 6.767 9.455l.126.545h-13.893c-.379 0-.725.214-.895.553l-15 30c-.155.31-.139.678.044.973.183.294.504.474.851.474h60c.347 0 .668-.18.851-.474.182-.295.199-.663.044-.973zm-32.602-4.846 4.293 4.293h-3.172l-7.707-7.707c-.391-.391-1.023-.391-1.414 0l-7.707 7.707h-3.172l9.293-9.293c.391-.391.391-1.023 0-1.414l-7.824-7.824 1.057-2.115 4.352 4.352c.196.196.452.294.708.294s.512-.098.707-.293l5-5c.188-.187.293-.442.293-.707v-6h2v7.586l-5.707 5.707c-.391.391-.391 1.023 0 1.414l6 6c.195.195.451.293.707.293s.512-.098.707-.293l8.707-8.707h14.968l1 2h-14.382c-.266 0-.52.105-.707.293l-8 8c-.391.391-.391 1.023 0 1.414zm-1.707 4.293h-11.172l5.586-5.586zm-2.586-40c0-4.411 3.589-8 8-8s8 3.589 8 8c0 3.585-2.417 6.753-5.877 7.705-.354.098-.626.381-.709.739l-1.414 6.117-1.414-6.117c-.083-.358-.355-.642-.709-.739-3.46-.952-5.877-4.12-5.877-7.705zm7.025 19.225c.106.454.509.775.975.775s.869-.321.975-.775l1.67-7.225h9.737l5 10h-14.382c-.266 0-.52.105-.707.293l-8.293 8.293-4.586-4.586 5.293-5.293c.188-.187.293-.442.293-.707v-8h2.355zm-15.407-7.225h5.382v5.586l-4 4-4.117-4.117zm-5.677 11.355 6.645 6.645-10 10h-4.968zm25.473 16.645-5-5 7-7h14.968l4 8h-4.847l-3.703-5.555c-.166-.25-.436-.411-.733-.44-.302-.031-.594.077-.806.288l-1.893 1.892-1.532-2.682c-.355-.623-1.381-.623-1.736 0l-3.712 6.497h-2.42v2h22.382l1 2zm8.863-4h-4.554l2.277-3.984zm2.303 0-1.151-2.015 1.416-1.415 2.287 3.43z" />
+                                            <path d="m38 21h2c0-3.309-2.691-6-6-6v2c2.206 0 4 1.794 4 4z" />
+                                            <path
+                                                d="m36.399 24.2 1.201 1.6c.83-.624 1.486-1.453 1.899-2.4l-1.832-.8c-.274.631-.713 1.184-1.268 1.6z" />
+                                            <path
+                                                d="m4 15c-.334 0-.646.167-.832.445l-2 3c-.224.336-.224.773 0 1.109l2 3c.186.279.498.446.832.446h5v9c0 .552.447 1 1 1h4c.553 0 1-.448 1-1v-9h7c.369 0 .708-.203.882-.528s.154-.72-.05-1.026l-1.63-2.446 1.63-2.445c.204-.307.224-.701.05-1.026s-.513-.529-.882-.529h-7v-2h5c.334 0 .646-.167.832-.445l2-3c.224-.336.224-.773 0-1.109l-2-3c-.186-.279-.498-.446-.832-.446h-5v-3c0-.552-.447-1-1-1h-4c-.553 0-1 .448-1 1v3h-7c-.369 0-.708.203-.882.528s-.154.72.05 1.026l1.63 2.446-1.63 2.445c-.204.307-.224.701-.05 1.026s.513.529.882.529h7v2zm9 16h-2v-8h2zm6.168-11.445.964 1.445h-15.597l-1.333-2 1.333-2h15.597l-.964 1.445c-.224.336-.224.774 0 1.11zm-8.168-16.555h2v2h-2zm-6.168 5.445-.964-1.445h15.597l1.333 2-1.333 2h-15.597l.964-1.445c.224-.336.224-.774 0-1.11zm6.168 4.555h2v2h-2z" />
+                                            <path d="m5 18h2v2h-2z" />
+                                            <path d="m9 18h2v2h-2z" />
+                                            <path d="m17 8h2v2h-2z" />
+                                            <path d="m13 8h2v2h-2z" />
+                                        </g>
+                                    </svg>
+                                    <h2 class="color_white font_18">@title</h2>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+                    </div>
+                    </div>
+                </face>
+                </basis>
+                <div class="clr"></div>
+                </div>
+            </section>
+            <section class="item-container tour-cat-container">
+                <div class="bc-main">
+                    <p class="dir-rtl more-results"><a href="tour-list.bc?catid=[##db.catID.catID##]"
+                            class="color_2  font_13 title-content font-weight tour__link">مشاهده تورها</a></p>
+                    <div class="dir-rtl subtitle-content p-relative">مقاصد گردشگری</div>
+                    <basis core="tree" datamembername="db.procat" idcol="catid" parentidcol="parentid"
+                        nullvalue="[##db.catID.catID##]">
+                        <layout>
+                            <div id="owl-demo-2" class="owl-carousel">@child</div>
+                        </layout>
+                        <face filter="link is null">
+                            <article>
+                                <a href="/tour-list.bc?catid=@catid" class="color_grey border-radius  text-center">
+                                    <figure class="float-right"><img src="[##cms.cms.cdn##]/@image" width="100%" height="" alt="@title"
+                                            class="cover-image" /></figure>
+                                    <h2 class="font_18 tour_name_bx float-left">@title</h2>
+                                    <div class="clr"></div>
+                                </a>
+                            </article>
+                        </face>
+                        <face>
+                            <article>
+                                <a href="/@link" class="color_grey border-radius  text-center">
+                                    <figure class="float-right"><img src="[##cms.cms.cdn##]/@image" width="100%" height="" alt="@title"
+                                            class="cover-image" /></figure>
+                                    <h2 class="font_18 tour_name_bx float-left">@title</h2>
+                                    <div class="clr"></div>
+                                </a>
+                            </article>
+                        </face>
+                    </basis>
+                </div>
+            </section>
+            <section class="newsletter-container">
+                <div class="bc-main">
+                    <div class="border-radius cover-image color_white dir-rtl">
+
+                        <div class="width_40 float-right text-center font_18 newsletter-content">
+                            <p>برای آگاهی ازخدمات و تخفیفات ویژه، عضو خبرنامه شوید</p>
+                            <form method="post" action="/Tem_Newsletter_Get.bc"
+                                class="width_80 newsletter-form form-content">
+                                <input type="text"
+                                    class="font_13 width_100 float-right input-style border-radius background-color_white"
+                                    placeholder="شماره تماس خود را وارد کنید" name="mobile" required>
+                                    <div class="clr"></div>
+                                    <div class="input-style border-radius background-color_white p-relative">
+                                        <input type="text" class="form-control width_50 float-right" name="Captcha"
+                                            placeholder="کد امنیتی" required>
+                                        <span class="field-captcha p-absolute dir-ltr">
+                                            <span class="load-captcha">
+                                                <img class="captcha" alt="captcha" src="[##captcha.code.captcha##]"
+                                                    loading="lazy" width="80" height="35">
+                                                <input type="hidden" value="[##captcha.code.captcha##]"
+                                                    name="Captchaid"></span>
+                                            <i class="fa fa-sync color_1 refresh-captcha cursor-pointer font_20"
+                                                onclick="refresh_captcha(this,event)"></i>
+                                        </span>
+                                        <div class="clr"></div>
+                                    </div>
+                                    <div class="clr"></div>
+                                    <div class="p-relative input-content background-color_white">
+                                        <input type="text"
+                                            class="font_13 width_100 float-right border-radius background-color_white"
+                                            placeholder="ایمیل خود را وارد کنید" name="email" required>
+                                            <button type="submit"
+                                                class="background-color_2 color_white btn_1 hvr-icon-wobble-vertical hvr-ripple-out transition p-absolute">ثبت
+                                                <i class="far fa-envelope color_white"></i></button>
+                                            <div class="clr"></div>
+                                    </div>
+                                    <div class="clr"></div>
+                                    <div class="Loading_Form unvisible text-center">
+                                        <div id="ballsWaveG">
+                                            <div id="ballsWaveG_1" class="ballsWaveG"></div>
+                                            <div id="ballsWaveG_2" class="ballsWaveG"></div>
+                                            <div id="ballsWaveG_3" class="ballsWaveG"></div>
+                                            <div id="ballsWaveG_4" class="ballsWaveG"></div>
+                                            <div id="ballsWaveG_5" class="ballsWaveG"></div>
+                                            <div id="ballsWaveG_6" class="ballsWaveG"></div>
+                                            <div id="ballsWaveG_7" class="ballsWaveG"></div>
+                                            <div id="ballsWaveG_8" class="ballsWaveG"></div>
+                                        </div>
+                                    </div>
+                                    <div class="Message-Form text-center font_16"></div>
+                                    </form>
+                        </div>
+                        <div class="clr"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="airline-container item-container">
+                <div class="bc-main">
+                    <ol class="border-radius text-center">
+                        <li><img src="[##cms.cms.cdn##]/images/airline-logo8.png" alt="" width="100" height="30" /></li>
+                        <li><img src="[##cms.cms.cdn##]/images/airline-logo7.png" alt="" width="100" height="30" /></li>
+                        <li><img src="[##cms.cms.cdn##]/images/airline-logo6.png" alt=" " width="100" height="30" /></li>
+                        <li><img src="[##cms.cms.cdn##]/images/airline-logo5.png" alt="" width="100" height="30" /></li>
+                        <li><img src="[##cms.cms.cdn##]/images/airline-logo4.png" alt="" width="100" height="30" /></li>
+                        <li><img src="[##cms.cms.cdn##]/images/airline-logo3.png" alt="" width="100" height="30" /></li>
+                        <li><img src="[##cms.cms.cdn##]/images/airline-logo2.png" alt="" width="100" height="30" /></li>
+                        <li><img src="[##cms.cms.cdn##]/images/airline-logo1.png" alt="" width="100" height="30" /></li>
+                    </ol>
+                </div>
+            </section>
+            <div class="clr"></div>
+        </section>
+     
+        <basis core="call" file="footer.inc" />
+    </main>
+</body>
+<!----JS DATEPICKER---->
+<script src="https://cdn.basiscore.net/basisfly.com/js/reservation_date_pickerUi.js" type="text/javascript"></script>
+<script src="https://cdn.basiscore.net/basisfly.com/js/reservation_date_picker.js" type="text/javascript"></script>
+<script src="https://cdn.basiscore.net/basisfly.com/js/reservation_main_date_picker.js" type="text/javascript"></script>
+<!----JS OWL CAROUSEL---->
+<script src="https://cdn.basiscore.net/basisfly.com/js/owl_carousel_tem4.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        /*<!----JS GENERAL---->*/
+        $("#search-box-container").load('/Tem4_Search_Box.bc')
+    })
+
+    $(document).ready(function () {
+        $("#owl-demo").owlCarousel({
+            autoPlay: 4000,
+            navigation: true,
+            items: 3,
+            itemsDesktop: [1199, 2],
+            itemsTablet: [800, 1]
+        });
+
+
+        $("#owl-demo-2").owlCarousel({
+            autoPlay: 4000,
+            navigation: true,
+            items: 3,
+            itemsDesktop: [1199, 2],
+            itemsTablet: [750, 1]
+        });
+    });
+
+    $(".about-container .about-box-altern li span").each(function () {
+        if ($(this).text().length > 40) {
+            $(this).text($(this).text().substr(0, 40) + "...");
+        }
+    });
+    $(function () {
+        if ($(".section-article-text").height() > 450) {
+            $(".section-article-text").addClass("Set_Height")
+            $(".Content_Shadow").removeClass("unvisible")
+            $(".Show_More").removeClass("unvisible")
+        } else {
+            $(".section-article-text").removeClass("Set_Height")
+            $(".Content_Shadow").addClass("unvisible")
+            $(".Show_More").addClass("unvisible")
+        }
+
+    })
+
+    function Show_More(element) {
+        $(element).closest(".bc-main").find(".section-article-text").toggleClass("Set_Height")
+        $(element).closest(".bc-main").find(".Content_Shadow").toggle()
+        var text = $(element).closest(".bc-main").find(".Text_Show_More").text();
+        $(element).closest(".bc-main").find(".Text_Show_More").text(
+            text == "نمایش بیشتر" ? "نمایش کمتر" : "نمایش بیشتر");
+    }
+    /*------------------REFRESH CAPTCHA-----------------------*/
+    function refresh_captcha(element, event) {
+        $(element).closest("form").find(".load-captcha").load("/Client_Captcha.bc");
+    }
+    /*------------------SUBMIT FORM-----------------------*/
+    $(".form-content").submit(function (e) {
+        var self = $(this);
+        self.closest("form").find(".Loading_Form").show();
+        e.preventDefault();
+        $.ajax({
+            url: self.attr("action"),
+            type: self.attr("method"),
+            data: $(self).serialize(),
+            success: function (response) {
+                self.closest("form").find(".Loading_Form").hide();
+                self.closest("form").find(".Message-Form").empty().show().html(response);
+            },
+        });
+    });
+    $(".slice").each(function () {
+   $(this).html($(this).html().replace(",", ""))
+});
+$(".slice").each(function () {
+   $(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"))
+});
+</script>
